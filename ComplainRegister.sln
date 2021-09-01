@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComplainRegister", "ComplainRegister\ComplainRegister.csproj", "{EB364F12-D9B7-4654-A0B3-B30CF07DE650}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB364F12-D9B7-4654-A0B3-B30CF07DE650}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB364F12-D9B7-4654-A0B3-B30CF07DE650}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB364F12-D9B7-4654-A0B3-B30CF07DE650}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB364F12-D9B7-4654-A0B3-B30CF07DE650}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51BB62B2-F0C4-48EB-BB6F-145B384D9730}
+	EndGlobalSection
+EndGlobal
