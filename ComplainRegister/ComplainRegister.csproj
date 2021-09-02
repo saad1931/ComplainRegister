@@ -113,5 +113,14 @@
   <ItemGroup>
     <None Include="Resources\if_icon-29-information_315150.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RESIZED MORE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CROSS RED_RESIZED.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHECK GREEN_RESIZED.bmp" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

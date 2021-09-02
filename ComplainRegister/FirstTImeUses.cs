@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace ComplainRegister
 {
-    public partial class FirstTImeUses : Form
+    public partial class panel1 : Form
     {
-        public FirstTImeUses()
+        public panel1()
         {
             InitializeComponent();
+        }
+        //error1
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+        //error2
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

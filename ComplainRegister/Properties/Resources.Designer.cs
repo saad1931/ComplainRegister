@@ -63,6 +63,26 @@ namespace ComplainRegister.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CHECK_GREEN_RESIZED {
+            get {
+                object obj = ResourceManager.GetObject("CHECK GREEN_RESIZED", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CROSS_RED_RESIZED {
+            get {
+                object obj = ResourceManager.GetObject("CROSS RED_RESIZED", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_icon_29_information_315150 {
             get {
                 object obj = ResourceManager.GetObject("if_icon-29-information_315150", resourceCulture);
@@ -76,6 +96,16 @@ namespace ComplainRegister.Properties {
         internal static System.Drawing.Bitmap NicePng_heaven_png_1178608 {
             get {
                 object obj = ResourceManager.GetObject("NicePng_heaven-png_1178608", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RESIZED_MORE {
+            get {
+                object obj = ResourceManager.GetObject("RESIZED MORE", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
