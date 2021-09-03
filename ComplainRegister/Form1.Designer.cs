@@ -33,23 +33,23 @@ namespace ComplainRegister
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.CncelButton = new System.Windows.Forms.Button();
+            this.SubmitButton = new System.Windows.Forms.Button();
+            this.UpdateButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.remo = new System.Windows.Forms.Button();
             this.EngList = new System.Windows.Forms.ListBox();
             this.TechList = new System.Windows.Forms.ListBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.detailsText = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.engcombo = new System.Windows.Forms.ComboBox();
+            this.techcombo = new System.Windows.Forms.ComboBox();
+            this.statusCombo = new System.Windows.Forms.ComboBox();
+            this.cityregion = new System.Windows.Forms.TextBox();
+            this.email = new System.Windows.Forms.TextBox();
+            this.phone = new System.Windows.Forms.TextBox();
+            this.productText = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -62,51 +62,52 @@ namespace ComplainRegister
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.statusSearch = new System.Windows.Forms.TextBox();
+            this.cityRegionSearch = new System.Windows.Forms.TextBox();
+            this.cNameSearch = new System.Windows.Forms.TextBox();
+            this.compIDSearch = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.button14 = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
+            this.confirmPass = new System.Windows.Forms.TextBox();
+            this.newPass = new System.Windows.Forms.TextBox();
+            this.oldPass = new System.Windows.Forms.TextBox();
+            this.userChangePass = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ChangeUserPass = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.cNameCombo = new System.Windows.Forms.ComboBox();
             this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.button14 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -136,24 +137,24 @@ namespace ComplainRegister
             // tabPage1
             // 
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage1.Controls.Add(this.cNameCombo);
             this.tabPage1.Controls.Add(this.pictureBox2);
-            this.tabPage1.Controls.Add(this.button9);
-            this.tabPage1.Controls.Add(this.button8);
-            this.tabPage1.Controls.Add(this.button7);
-            this.tabPage1.Controls.Add(this.button6);
-            this.tabPage1.Controls.Add(this.button5);
+            this.tabPage1.Controls.Add(this.CncelButton);
+            this.tabPage1.Controls.Add(this.SubmitButton);
+            this.tabPage1.Controls.Add(this.UpdateButton);
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.remo);
             this.tabPage1.Controls.Add(this.EngList);
             this.tabPage1.Controls.Add(this.TechList);
-            this.tabPage1.Controls.Add(this.textBox6);
-            this.tabPage1.Controls.Add(this.textBox5);
+            this.tabPage1.Controls.Add(this.detailsText);
             this.tabPage1.Controls.Add(this.dateTimePicker1);
-            this.tabPage1.Controls.Add(this.comboBox3);
-            this.tabPage1.Controls.Add(this.comboBox2);
-            this.tabPage1.Controls.Add(this.comboBox1);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.engcombo);
+            this.tabPage1.Controls.Add(this.techcombo);
+            this.tabPage1.Controls.Add(this.statusCombo);
+            this.tabPage1.Controls.Add(this.cityregion);
+            this.tabPage1.Controls.Add(this.email);
+            this.tabPage1.Controls.Add(this.phone);
+            this.tabPage1.Controls.Add(this.productText);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.label10);
@@ -173,50 +174,59 @@ namespace ComplainRegister
             this.tabPage1.Text = "Register Complaint";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // pictureBox2
             // 
-            this.button9.Location = new System.Drawing.Point(625, 553);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 27;
-            this.button9.Text = "Cancel";
-            this.button9.UseVisualStyleBackColor = true;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(19, 148);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(125, 130);
+            this.pictureBox2.TabIndex = 28;
+            this.pictureBox2.TabStop = false;
             // 
-            // button8
+            // CncelButton
             // 
-            this.button8.Location = new System.Drawing.Point(531, 553);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 26;
-            this.button8.Text = "Submit";
-            this.button8.UseVisualStyleBackColor = true;
+            this.CncelButton.Location = new System.Drawing.Point(625, 553);
+            this.CncelButton.Name = "CncelButton";
+            this.CncelButton.Size = new System.Drawing.Size(75, 23);
+            this.CncelButton.TabIndex = 27;
+            this.CncelButton.Text = "Cancel";
+            this.CncelButton.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // SubmitButton
             // 
-            this.button7.Location = new System.Drawing.Point(436, 553);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 25;
-            this.button7.Text = "Update";
-            this.button7.UseVisualStyleBackColor = true;
+            this.SubmitButton.Location = new System.Drawing.Point(531, 553);
+            this.SubmitButton.Name = "SubmitButton";
+            this.SubmitButton.Size = new System.Drawing.Size(75, 23);
+            this.SubmitButton.TabIndex = 26;
+            this.SubmitButton.Text = "Submit";
+            this.SubmitButton.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // UpdateButton
             // 
-            this.button6.Location = new System.Drawing.Point(709, 498);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 24;
-            this.button6.Text = "Remove";
-            this.button6.UseVisualStyleBackColor = true;
+            this.UpdateButton.Location = new System.Drawing.Point(436, 553);
+            this.UpdateButton.Name = "UpdateButton";
+            this.UpdateButton.Size = new System.Drawing.Size(75, 23);
+            this.UpdateButton.TabIndex = 25;
+            this.UpdateButton.Text = "Update";
+            this.UpdateButton.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // button1
             // 
-            this.button5.Location = new System.Drawing.Point(367, 498);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "Remove";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(709, 498);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Remove";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // remo
+            // 
+            this.remo.Location = new System.Drawing.Point(367, 498);
+            this.remo.Name = "remo";
+            this.remo.Size = new System.Drawing.Size(75, 23);
+            this.remo.TabIndex = 23;
+            this.remo.Text = "Remove";
+            this.remo.UseVisualStyleBackColor = true;
             // 
             // EngList
             // 
@@ -236,19 +246,12 @@ namespace ComplainRegister
             this.TechList.Size = new System.Drawing.Size(240, 100);
             this.TechList.TabIndex = 21;
             // 
-            // textBox6
+            // detailsText
             // 
-            this.textBox6.Location = new System.Drawing.Point(660, 125);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(190, 22);
-            this.textBox6.TabIndex = 20;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(296, 86);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(240, 22);
-            this.textBox5.TabIndex = 19;
+            this.detailsText.Location = new System.Drawing.Point(660, 125);
+            this.detailsText.Name = "detailsText";
+            this.detailsText.Size = new System.Drawing.Size(190, 22);
+            this.detailsText.TabIndex = 20;
             // 
             // dateTimePicker1
             // 
@@ -257,57 +260,58 @@ namespace ComplainRegister
             this.dateTimePicker1.Size = new System.Drawing.Size(240, 22);
             this.dateTimePicker1.TabIndex = 18;
             // 
-            // comboBox3
+            // engcombo
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(661, 166);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(190, 24);
-            this.comboBox3.TabIndex = 17;
+            this.engcombo.FormattingEnabled = true;
+            this.engcombo.Location = new System.Drawing.Point(661, 166);
+            this.engcombo.Name = "engcombo";
+            this.engcombo.Size = new System.Drawing.Size(190, 24);
+            this.engcombo.TabIndex = 17;
             // 
-            // comboBox2
+            // techcombo
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(296, 339);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(240, 24);
-            this.comboBox2.TabIndex = 16;
+            this.techcombo.FormattingEnabled = true;
+            this.techcombo.Location = new System.Drawing.Point(296, 339);
+            this.techcombo.Name = "techcombo";
+            this.techcombo.Size = new System.Drawing.Size(240, 24);
+            this.techcombo.TabIndex = 16;
             // 
-            // comboBox1
+            // statusCombo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(296, 298);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(240, 24);
-            this.comboBox1.TabIndex = 15;
+            this.statusCombo.FormattingEnabled = true;
+            this.statusCombo.Location = new System.Drawing.Point(296, 298);
+            this.statusCombo.Name = "statusCombo";
+            this.statusCombo.Size = new System.Drawing.Size(240, 24);
+            this.statusCombo.TabIndex = 15;
             // 
-            // textBox4
+            // cityregion
             // 
-            this.textBox4.Location = new System.Drawing.Point(660, 86);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(190, 22);
-            this.textBox4.TabIndex = 14;
+            this.cityregion.Location = new System.Drawing.Point(660, 86);
+            this.cityregion.Name = "cityregion";
+            this.cityregion.Size = new System.Drawing.Size(190, 22);
+            this.cityregion.TabIndex = 14;
             // 
-            // textBox3
+            // email
             // 
-            this.textBox3.Location = new System.Drawing.Point(296, 211);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(240, 22);
-            this.textBox3.TabIndex = 13;
+            this.email.Location = new System.Drawing.Point(296, 211);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(240, 22);
+            this.email.TabIndex = 13;
+            this.email.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // textBox2
+            // phone
             // 
-            this.textBox2.Location = new System.Drawing.Point(296, 168);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(240, 22);
-            this.textBox2.TabIndex = 12;
+            this.phone.Location = new System.Drawing.Point(296, 168);
+            this.phone.Name = "phone";
+            this.phone.Size = new System.Drawing.Size(240, 22);
+            this.phone.TabIndex = 12;
             // 
-            // textBox1
+            // productText
             // 
-            this.textBox1.Location = new System.Drawing.Point(296, 128);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(240, 22);
-            this.textBox1.TabIndex = 11;
+            this.productText.Location = new System.Drawing.Point(296, 128);
+            this.productText.Name = "productText";
+            this.productText.Size = new System.Drawing.Size(240, 22);
+            this.productText.TabIndex = 11;
             // 
             // label12
             // 
@@ -412,14 +416,14 @@ namespace ComplainRegister
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.pictureBox3);
-            this.tabPage2.Controls.Add(this.button13);
-            this.tabPage2.Controls.Add(this.button12);
-            this.tabPage2.Controls.Add(this.button11);
+            this.tabPage2.Controls.Add(this.button9);
+            this.tabPage2.Controls.Add(this.button7);
             this.tabPage2.Controls.Add(this.button10);
-            this.tabPage2.Controls.Add(this.textBox10);
-            this.tabPage2.Controls.Add(this.textBox9);
-            this.tabPage2.Controls.Add(this.textBox8);
-            this.tabPage2.Controls.Add(this.textBox7);
+            this.tabPage2.Controls.Add(this.button8);
+            this.tabPage2.Controls.Add(this.statusSearch);
+            this.tabPage2.Controls.Add(this.cityRegionSearch);
+            this.tabPage2.Controls.Add(this.cNameSearch);
+            this.tabPage2.Controls.Add(this.compIDSearch);
             this.tabPage2.Controls.Add(this.label17);
             this.tabPage2.Controls.Add(this.label16);
             this.tabPage2.Controls.Add(this.label15);
@@ -433,15 +437,143 @@ namespace ComplainRegister
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(44, 139);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(125, 130);
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
+            // 
+            // button9
+            // 
+            this.button9.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.button9.Location = new System.Drawing.Point(627, 347);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(113, 29);
+            this.button9.TabIndex = 12;
+            this.button9.Text = "Delete";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.button7.Location = new System.Drawing.Point(491, 347);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(113, 29);
+            this.button7.TabIndex = 11;
+            this.button7.Text = "Search";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.button10.Location = new System.Drawing.Point(356, 347);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(113, 29);
+            this.button10.TabIndex = 10;
+            this.button10.Text = "View/Edit";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.button8.Location = new System.Drawing.Point(213, 347);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(113, 29);
+            this.button8.TabIndex = 9;
+            this.button8.Text = "Update Status";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // statusSearch
+            // 
+            this.statusSearch.Location = new System.Drawing.Point(395, 267);
+            this.statusSearch.Name = "statusSearch";
+            this.statusSearch.Size = new System.Drawing.Size(179, 22);
+            this.statusSearch.TabIndex = 8;
+            // 
+            // cityRegionSearch
+            // 
+            this.cityRegionSearch.Location = new System.Drawing.Point(395, 226);
+            this.cityRegionSearch.Name = "cityRegionSearch";
+            this.cityRegionSearch.Size = new System.Drawing.Size(179, 22);
+            this.cityRegionSearch.TabIndex = 7;
+            // 
+            // cNameSearch
+            // 
+            this.cNameSearch.Location = new System.Drawing.Point(395, 182);
+            this.cNameSearch.Name = "cNameSearch";
+            this.cNameSearch.Size = new System.Drawing.Size(179, 22);
+            this.cNameSearch.TabIndex = 6;
+            // 
+            // compIDSearch
+            // 
+            this.compIDSearch.Location = new System.Drawing.Point(395, 139);
+            this.compIDSearch.Name = "compIDSearch";
+            this.compIDSearch.Size = new System.Drawing.Size(179, 22);
+            this.compIDSearch.TabIndex = 5;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.label17.Location = new System.Drawing.Point(285, 267);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(56, 20);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "Status :";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.label16.Location = new System.Drawing.Point(285, 226);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(41, 20);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "City :";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.label15.Location = new System.Drawing.Point(285, 182);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(98, 20);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "Client Name :";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.label14.Location = new System.Drawing.Point(285, 139);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(104, 20);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Complaint ID :";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.label13.Location = new System.Drawing.Point(330, 38);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(198, 41);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Search Filters";
+            // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.button12);
             this.tabPage3.Controls.Add(this.pictureBox4);
             this.tabPage3.Controls.Add(this.button14);
             this.tabPage3.Controls.Add(this.label23);
-            this.tabPage3.Controls.Add(this.textBox14);
-            this.tabPage3.Controls.Add(this.textBox13);
-            this.tabPage3.Controls.Add(this.textBox12);
-            this.tabPage3.Controls.Add(this.textBox11);
+            this.tabPage3.Controls.Add(this.confirmPass);
+            this.tabPage3.Controls.Add(this.newPass);
+            this.tabPage3.Controls.Add(this.oldPass);
+            this.tabPage3.Controls.Add(this.userChangePass);
             this.tabPage3.Controls.Add(this.label21);
             this.tabPage3.Controls.Add(this.label22);
             this.tabPage3.Controls.Add(this.label20);
@@ -455,14 +587,122 @@ namespace ComplainRegister
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(26, 149);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(125, 130);
+            this.pictureBox4.TabIndex = 12;
+            this.pictureBox4.TabStop = false;
+            // 
+            // button14
+            // 
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Image = ((System.Drawing.Image)(resources.GetObject("button14.Image")));
+            this.button14.Location = new System.Drawing.Point(384, 346);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(35, 36);
+            this.button14.TabIndex = 11;
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.label23.ForeColor = System.Drawing.Color.Red;
+            this.label23.Location = new System.Drawing.Point(425, 353);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(194, 20);
+            this.label23.TabIndex = 10;
+            this.label23.Text = "User and Password Matched";
+            // 
+            // confirmPass
+            // 
+            this.confirmPass.Location = new System.Drawing.Point(398, 281);
+            this.confirmPass.Name = "confirmPass";
+            this.confirmPass.Size = new System.Drawing.Size(226, 22);
+            this.confirmPass.TabIndex = 9;
+            // 
+            // newPass
+            // 
+            this.newPass.Location = new System.Drawing.Point(398, 239);
+            this.newPass.Name = "newPass";
+            this.newPass.Size = new System.Drawing.Size(226, 22);
+            this.newPass.TabIndex = 8;
+            // 
+            // oldPass
+            // 
+            this.oldPass.Location = new System.Drawing.Point(398, 191);
+            this.oldPass.Name = "oldPass";
+            this.oldPass.Size = new System.Drawing.Size(226, 22);
+            this.oldPass.TabIndex = 7;
+            // 
+            // userChangePass
+            // 
+            this.userChangePass.Location = new System.Drawing.Point(398, 149);
+            this.userChangePass.Name = "userChangePass";
+            this.userChangePass.Size = new System.Drawing.Size(226, 22);
+            this.userChangePass.TabIndex = 6;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.label21.Location = new System.Drawing.Point(230, 241);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(111, 20);
+            this.label21.TabIndex = 5;
+            this.label21.Text = "New Password :";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.label22.Location = new System.Drawing.Point(230, 283);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(134, 20);
+            this.label22.TabIndex = 4;
+            this.label22.Text = "Confirm Password :";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.label20.Location = new System.Drawing.Point(230, 193);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(105, 20);
+            this.label20.TabIndex = 3;
+            this.label20.Text = "Old Password :";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.label19.Location = new System.Drawing.Point(230, 149);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(85, 20);
+            this.label19.TabIndex = 1;
+            this.label19.Text = "UserName :";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.label18.Location = new System.Drawing.Point(192, 43);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(494, 41);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Change Operator/Admin Password";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.ChangeUserPass);
+            this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(-2, -1);
             this.panel2.Name = "panel2";
@@ -488,42 +728,42 @@ namespace ComplainRegister
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button3
-            // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(683, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(80, 36);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "     Logout";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(488, 0);
+            this.button2.Location = new System.Drawing.Point(683, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(172, 36);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "     Change Your Password";
+            this.button2.Size = new System.Drawing.Size(80, 36);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "     Logout";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // ChangeUserPass
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(785, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(33, 36);
-            this.button1.TabIndex = 2;
-            this.button1.UseVisualStyleBackColor = true;
+            this.ChangeUserPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ChangeUserPass.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.ChangeUserPass.Image = ((System.Drawing.Image)(resources.GetObject("ChangeUserPass.Image")));
+            this.ChangeUserPass.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ChangeUserPass.Location = new System.Drawing.Point(488, 0);
+            this.ChangeUserPass.Name = "ChangeUserPass";
+            this.ChangeUserPass.Size = new System.Drawing.Size(172, 36);
+            this.ChangeUserPass.TabIndex = 3;
+            this.ChangeUserPass.Text = "     Change Your Password";
+            this.ChangeUserPass.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(785, 0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(33, 36);
+            this.button5.TabIndex = 2;
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -534,249 +774,22 @@ namespace ComplainRegister
             this.label1.TabIndex = 1;
             this.label1.Text = "Complaint Register";
             // 
-            // label13
+            // cNameCombo
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.label13.Location = new System.Drawing.Point(330, 38);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(198, 41);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Search Filters";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.label14.Location = new System.Drawing.Point(285, 139);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(104, 20);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Complaint ID :";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.label15.Location = new System.Drawing.Point(285, 182);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(98, 20);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "Client Name :";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.label16.Location = new System.Drawing.Point(285, 226);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(41, 20);
-            this.label16.TabIndex = 3;
-            this.label16.Text = "City :";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.label17.Location = new System.Drawing.Point(285, 267);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(56, 20);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "Status :";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(395, 139);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(179, 22);
-            this.textBox7.TabIndex = 5;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(395, 182);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(179, 22);
-            this.textBox8.TabIndex = 6;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(395, 226);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(179, 22);
-            this.textBox9.TabIndex = 7;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(395, 267);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(179, 22);
-            this.textBox10.TabIndex = 8;
-            // 
-            // button10
-            // 
-            this.button10.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.button10.Location = new System.Drawing.Point(213, 347);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(113, 29);
-            this.button10.TabIndex = 9;
-            this.button10.Text = "Update Status";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.button11.Location = new System.Drawing.Point(356, 347);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(113, 29);
-            this.button11.TabIndex = 10;
-            this.button11.Text = "View/Edit";
-            this.button11.UseVisualStyleBackColor = true;
+            this.cNameCombo.FormattingEnabled = true;
+            this.cNameCombo.Location = new System.Drawing.Point(296, 86);
+            this.cNameCombo.Name = "cNameCombo";
+            this.cNameCombo.Size = new System.Drawing.Size(240, 24);
+            this.cNameCombo.TabIndex = 29;
             // 
             // button12
             // 
-            this.button12.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.button12.Location = new System.Drawing.Point(491, 347);
+            this.button12.Location = new System.Drawing.Point(429, 486);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(113, 29);
-            this.button12.TabIndex = 11;
-            this.button12.Text = "Search";
+            this.button12.Size = new System.Drawing.Size(133, 23);
+            this.button12.TabIndex = 13;
+            this.button12.Text = "Update Password";
             this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            this.button13.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.button13.Location = new System.Drawing.Point(627, 347);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(113, 29);
-            this.button13.TabIndex = 12;
-            this.button13.Text = "Delete";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.label18.Location = new System.Drawing.Point(192, 43);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(494, 41);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Change Operator/Admin Password";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.label19.Location = new System.Drawing.Point(230, 149);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(85, 20);
-            this.label19.TabIndex = 1;
-            this.label19.Text = "UserName :";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.label20.Location = new System.Drawing.Point(230, 193);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(105, 20);
-            this.label20.TabIndex = 3;
-            this.label20.Text = "Old Password :";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.label22.Location = new System.Drawing.Point(230, 283);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(134, 20);
-            this.label22.TabIndex = 4;
-            this.label22.Text = "Confirm Password :";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.label21.Location = new System.Drawing.Point(230, 241);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(111, 20);
-            this.label21.TabIndex = 5;
-            this.label21.Text = "New Password :";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(398, 149);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(226, 22);
-            this.textBox11.TabIndex = 6;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(398, 191);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(226, 22);
-            this.textBox12.TabIndex = 7;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(398, 239);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(226, 22);
-            this.textBox13.TabIndex = 8;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(398, 281);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(226, 22);
-            this.textBox14.TabIndex = 9;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.label23.ForeColor = System.Drawing.Color.Red;
-            this.label23.Location = new System.Drawing.Point(425, 353);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(194, 20);
-            this.label23.TabIndex = 10;
-            this.label23.Text = "User and Password Matched";
-            // 
-            // button14
-            // 
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Image = ((System.Drawing.Image)(resources.GetObject("button14.Image")));
-            this.button14.Location = new System.Drawing.Point(384, 346);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(35, 36);
-            this.button14.TabIndex = 11;
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(19, 148);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(125, 130);
-            this.pictureBox2.TabIndex = 28;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(44, 139);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(125, 130);
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(26, 149);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(125, 130);
-            this.pictureBox4.TabIndex = 12;
-            this.pictureBox4.TabStop = false;
             // 
             // Form1
             // 
@@ -792,15 +805,15 @@ namespace ComplainRegister
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -810,9 +823,9 @@ namespace ComplainRegister
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ChangeUserPass;
+        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabControl tabControl1;
@@ -820,23 +833,22 @@ namespace ComplainRegister
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button CncelButton;
+        private System.Windows.Forms.Button SubmitButton;
+        private System.Windows.Forms.Button UpdateButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button remo;
         private System.Windows.Forms.ListBox EngList;
         private System.Windows.Forms.ListBox TechList;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox detailsText;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox engcombo;
+        private System.Windows.Forms.ComboBox techcombo;
+        private System.Windows.Forms.ComboBox statusCombo;
+        private System.Windows.Forms.TextBox cityregion;
+        private System.Windows.Forms.TextBox email;
+        private System.Windows.Forms.TextBox phone;
+        private System.Windows.Forms.TextBox productText;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -849,14 +861,14 @@ namespace ComplainRegister
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox statusSearch;
+        private System.Windows.Forms.TextBox cityRegionSearch;
+        private System.Windows.Forms.TextBox cNameSearch;
+        private System.Windows.Forms.TextBox compIDSearch;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
@@ -865,15 +877,17 @@ namespace ComplainRegister
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox confirmPass;
+        private System.Windows.Forms.TextBox newPass;
+        private System.Windows.Forms.TextBox oldPass;
+        private System.Windows.Forms.TextBox userChangePass;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox cNameCombo;
+        private System.Windows.Forms.Button button12;
     }
 }
 
