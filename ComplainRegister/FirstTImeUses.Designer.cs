@@ -42,7 +42,7 @@ namespace ComplainRegister
             this.duplicateUserIcon = new System.Windows.Forms.PictureBox();
             this.operatorExistIcon = new System.Windows.Forms.PictureBox();
             this.adminExistIcon = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.engLabelIcon = new System.Windows.Forms.PictureBox();
             this.emptyUserLabelIcon = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -50,7 +50,7 @@ namespace ComplainRegister
             ((System.ComponentModel.ISupportInitialize)(this.duplicateUserIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.operatorExistIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminExistIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.engLabelIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptyUserLabelIcon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -187,12 +187,12 @@ namespace ComplainRegister
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ComplainRegister.Properties.Resources.RESIZED_MORE;
-            this.pictureBox1.Location = new System.Drawing.Point(74, 38);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(83, 91);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.engLabelIcon.Image = global::ComplainRegister.Properties.Resources.RESIZED_MORE;
+            this.engLabelIcon.Location = new System.Drawing.Point(74, 38);
+            this.engLabelIcon.Name = "pictureBox1";
+            this.engLabelIcon.Size = new System.Drawing.Size(83, 91);
+            this.engLabelIcon.TabIndex = 1;
+            this.engLabelIcon.TabStop = false;
             // 
             // emptyUserLabelIcon
             // 
@@ -246,7 +246,7 @@ namespace ComplainRegister
             this.Controls.Add(this.operatorExistLabel);
             this.Controls.Add(this.adminExistLabel);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.engLabelIcon);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "panel1";
@@ -255,7 +255,7 @@ namespace ComplainRegister
             ((System.ComponentModel.ISupportInitialize)(this.duplicateUserIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.operatorExistIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminExistIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.engLabelIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptyUserLabelIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -265,7 +265,7 @@ namespace ComplainRegister
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox engLabelIcon;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label adminExistLabel;
         private System.Windows.Forms.Label operatorExistLabel;

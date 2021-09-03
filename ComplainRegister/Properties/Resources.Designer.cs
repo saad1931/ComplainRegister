@@ -63,6 +63,16 @@ namespace ComplainRegister.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arrow_31_16 {
+            get {
+                object obj = ResourceManager.GetObject("arrow-31-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CHECK_GREEN_RESIZED {
             get {
                 object obj = ResourceManager.GetObject("CHECK GREEN_RESIZED", resourceCulture);
@@ -76,6 +86,16 @@ namespace ComplainRegister.Properties {
         internal static System.Drawing.Bitmap CROSS_RED_RESIZED {
             get {
                 object obj = ResourceManager.GetObject("CROSS RED_RESIZED", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CROSS_RED_RESIZED1 {
+            get {
+                object obj = ResourceManager.GetObject("CROSS RED_RESIZED1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +123,59 @@ namespace ComplainRegister.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Plus_mark {
+            get {
+                object obj = ResourceManager.GetObject("Plus mark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Plus_mark1 {
+            get {
+                object obj = ResourceManager.GetObject("Plus mark1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RESIZED_MORE {
             get {
                 object obj = ResourceManager.GetObject("RESIZED MORE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap undo_4_16 {
+            get {
+                object obj = ResourceManager.GetObject("undo-4-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap upload_3_16 {
+            get {
+                object obj = ResourceManager.GetObject("upload-3-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap x_mark_16 {
+            get {
+                object obj = ResourceManager.GetObject("x-mark-16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

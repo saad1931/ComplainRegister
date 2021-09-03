@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddTechAndEnginners.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTechAndEnginners.Designer.cs">
+      <DependentUpon>AddTechAndEnginners.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeOwnPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeOwnPass.Designer.cs">
+      <DependentUpon>ChangeOwnPass.cs</DependentUpon>
+    </Compile>
     <Compile Include="FirstTImeUses.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +84,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddTechAndEnginners.resx">
+      <DependentUpon>AddTechAndEnginners.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeOwnPass.resx">
+      <DependentUpon>ChangeOwnPass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FirstTImeUses.resx">
       <DependentUpon>FirstTImeUses.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +139,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CHECK GREEN_RESIZED.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo-4-161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CROSS RED_RESIZED1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-31-161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus mark2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus mark11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upload-3-161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-mark-162.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
