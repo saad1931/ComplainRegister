@@ -1,7 +1,7 @@
 ﻿
 namespace ComplainRegister
 {
-    partial class panel1
+    partial class FirstTImeUses
     {
         /// <summary>
         /// Required designer variable.
@@ -46,6 +46,8 @@ namespace ComplainRegister
             this.emptyUserLabelIcon = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Accounts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.duplicateUserIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.operatorExistIcon)).BeginInit();
@@ -80,7 +82,7 @@ namespace ComplainRegister
             // 
             this.adminExistLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.adminExistLabel.ForeColor = System.Drawing.Color.Red;
-            this.adminExistLabel.Location = new System.Drawing.Point(114, 422);
+            this.adminExistLabel.Location = new System.Drawing.Point(113, 394);
             this.adminExistLabel.Name = "adminExistLabel";
             this.adminExistLabel.Size = new System.Drawing.Size(196, 20);
             this.adminExistLabel.TabIndex = 38;
@@ -90,7 +92,7 @@ namespace ComplainRegister
             // 
             this.operatorExistLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.operatorExistLabel.ForeColor = System.Drawing.Color.Red;
-            this.operatorExistLabel.Location = new System.Drawing.Point(115, 470);
+            this.operatorExistLabel.Location = new System.Drawing.Point(113, 438);
             this.operatorExistLabel.Name = "operatorExistLabel";
             this.operatorExistLabel.Size = new System.Drawing.Size(212, 20);
             this.operatorExistLabel.TabIndex = 39;
@@ -100,7 +102,7 @@ namespace ComplainRegister
             // 
             this.duplicateUser.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.duplicateUser.ForeColor = System.Drawing.Color.Green;
-            this.duplicateUser.Location = new System.Drawing.Point(115, 518);
+            this.duplicateUser.Location = new System.Drawing.Point(113, 475);
             this.duplicateUser.Name = "duplicateUser";
             this.duplicateUser.Size = new System.Drawing.Size(169, 20);
             this.duplicateUser.TabIndex = 43;
@@ -149,7 +151,7 @@ namespace ComplainRegister
             this.emptyUserLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.emptyUserLabel.ForeColor = System.Drawing.Color.Red;
             this.emptyUserLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.emptyUserLabel.Location = new System.Drawing.Point(116, 560);
+            this.emptyUserLabel.Location = new System.Drawing.Point(113, 508);
             this.emptyUserLabel.Name = "emptyUserLabel";
             this.emptyUserLabel.Size = new System.Drawing.Size(149, 20);
             this.emptyUserLabel.TabIndex = 50;
@@ -159,7 +161,7 @@ namespace ComplainRegister
             // duplicateUserIcon
             // 
             this.duplicateUserIcon.Image = global::ComplainRegister.Properties.Resources.CHECK_GREEN_RESIZED;
-            this.duplicateUserIcon.Location = new System.Drawing.Point(85, 514);
+            this.duplicateUserIcon.Location = new System.Drawing.Point(80, 468);
             this.duplicateUserIcon.Name = "duplicateUserIcon";
             this.duplicateUserIcon.Size = new System.Drawing.Size(27, 27);
             this.duplicateUserIcon.TabIndex = 53;
@@ -169,7 +171,7 @@ namespace ComplainRegister
             // 
             this.operatorExistIcon.Image = global::ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
             this.operatorExistIcon.InitialImage = global::ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
-            this.operatorExistIcon.Location = new System.Drawing.Point(85, 466);
+            this.operatorExistIcon.Location = new System.Drawing.Point(80, 431);
             this.operatorExistIcon.Name = "operatorExistIcon";
             this.operatorExistIcon.Size = new System.Drawing.Size(27, 27);
             this.operatorExistIcon.TabIndex = 52;
@@ -179,7 +181,7 @@ namespace ComplainRegister
             // 
             this.adminExistIcon.Image = global::ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
             this.adminExistIcon.InitialImage = global::ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
-            this.adminExistIcon.Location = new System.Drawing.Point(85, 418);
+            this.adminExistIcon.Location = new System.Drawing.Point(80, 394);
             this.adminExistIcon.Name = "adminExistIcon";
             this.adminExistIcon.Size = new System.Drawing.Size(27, 27);
             this.adminExistIcon.TabIndex = 51;
@@ -197,7 +199,7 @@ namespace ComplainRegister
             // emptyUserLabelIcon
             // 
             this.emptyUserLabelIcon.Image = global::ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
-            this.emptyUserLabelIcon.Location = new System.Drawing.Point(87, 556);
+            this.emptyUserLabelIcon.Location = new System.Drawing.Point(80, 501);
             this.emptyUserLabelIcon.Name = "emptyUserLabelIcon";
             this.emptyUserLabelIcon.Size = new System.Drawing.Size(27, 27);
             this.emptyUserLabelIcon.TabIndex = 54;
@@ -213,6 +215,7 @@ namespace ComplainRegister
             this.button4.TabIndex = 4;
             this.button4.Text = "r";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -228,12 +231,37 @@ namespace ComplainRegister
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // panel1
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.button1.Location = new System.Drawing.Point(101, 577);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 56;
+            this.button1.Text = "Continue";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.button2.Location = new System.Drawing.Point(207, 577);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 57;
+            this.button2.Text = "Exit";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // FirstTImeUses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(391, 638);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.emptyUserLabelIcon);
@@ -249,7 +277,7 @@ namespace ComplainRegister
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "panel1";
+            this.Name = "FirstTImeUses";
             this.Text = "FirstTImeUses";
             ((System.ComponentModel.ISupportInitialize)(this.Accounts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.duplicateUserIcon)).EndInit();
@@ -281,5 +309,7 @@ namespace ComplainRegister
         private System.Windows.Forms.PictureBox emptyUserLabelIcon;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

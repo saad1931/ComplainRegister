@@ -1,7 +1,7 @@
 ﻿
 namespace ComplainRegister
 {
-    partial class Form2
+    partial class FormLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,16 +29,16 @@ namespace ComplainRegister
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -91,6 +91,32 @@ namespace ComplainRegister
             this.panel2.Size = new System.Drawing.Size(413, 155);
             this.panel2.TabIndex = 2;
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(191, 92);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
+            this.textBox2.Size = new System.Drawing.Size(163, 20);
+            this.textBox2.TabIndex = 4;
+            this.textBox2.UseSystemPasswordChar = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(191, 51);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(163, 20);
+            this.textBox1.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.label4.Location = new System.Drawing.Point(70, 47);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(98, 25);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "UserName:";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -110,32 +136,6 @@ namespace ComplainRegister
             this.label2.TabIndex = 0;
             this.label2.Text = "label2";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.label4.Location = new System.Drawing.Point(70, 47);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 25);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "UserName:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(191, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 20);
-            this.textBox1.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(191, 92);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(163, 20);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.UseSystemPasswordChar = true;
-            // 
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
@@ -145,6 +145,7 @@ namespace ComplainRegister
             this.button5.TabIndex = 3;
             this.button5.Text = "Login";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -155,8 +156,9 @@ namespace ComplainRegister
             this.button6.TabIndex = 4;
             this.button6.Text = "Exit";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // Form2
+            // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -167,7 +169,7 @@ namespace ComplainRegister
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(1, -1);
-            this.Name = "Form2";
+            this.Name = "FormLogin";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
