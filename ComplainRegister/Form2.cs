@@ -10,12 +10,21 @@ using System.Windows.Forms;
 
 namespace ComplainRegister
 {
-    public partial class Form2 : Form
+    public partial class FormLogin : Form
     {
-        public Form2()
+        public FormLogin()
         {
             InitializeComponent();
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
