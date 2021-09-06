@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ComplainRegister
 {
@@ -16,5 +17,103 @@ namespace ComplainRegister
         {
             InitializeComponent();
         }
+        private void button2_click(object sender, EventArgs e)
+        {
+            if (technicianBox.Text != "")
+            {
+                techList.Items.Add(technicianBox.Text);
+                technicianBox.Clear();
+            }
+        }
+        private void button3_click(object sender, EventArgs e)
+        {
+            if (engineerBox.Text != "")
+            {
+                engList.Items.Add(engineerBox.Text);
+                engineerBox.Clear();
+            }
+        }
+        private void remo_Click(object sender, EventArgs e)
+        {
+            techList.Items.Remove(techList.SelectedItem);
+        }
+        private void button1_click(object sender, EventArgs e)
+        {
+            engList.Items.Remove(engList.SelectedItem);
+        }
+        private void technicanBox_keyPress(object sender, KeyPressEventArgs e)
+        {
+            if (techList.Items.Count >= 2)
+            {
+                techLabelIcon.Image = ComplainRegister.Properties.Resources.CHECK_GREEN_RESIZED;
+                techLabel.ForeColor = Color.Green;
+            }
+            else
+            {
+                techLabelIcon.Image = ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
+                techLabel.ForeColor = Color.Red;
+            }
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                techList.Items.Add(technicianBox.Text);
+                technicianBox.Clear();
+            }
+        }
+        private void engineerBox_keyPress(object sender, KeyPressEventArgs e)
+        {
+            if (engList.Items.Count >= 2)
+            {
+                engLabelIcon.Image = ComplainRegister.Properties.Resources.CHECK_GREEN_RESIZED;
+                engLabel.ForeColor = Color.Green;
+            }
+            else
+            {
+                engLabelIcon.Image = ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
+                engLabel.ForeColor = Color.Red;
+            }
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                engList.Items.Add(technicianBox.Text);
+                engineerBox.Clear(); 
+            }
+
+        }
+        private void Continue_click(object sender, EventArgs e)
+        {
+            continueToLogin();
+        }
+
+        public void continueToLogin()
+        {
+            if (techLabel.ForeColor == Color.Red || engLabel.ForeColor == Color.Red)
+            {
+                LogOutMessageBox log = new LogOutMessageBox();
+                //log.makeOkButton("One or more requirements not fulfilled.");
+                log.Size = new Size(log.Width + 10, log.Height);
+                log.SetCrossLocation(log.button1.Location.X + 12, log.button1.Location.Y);
+                log.Show();
+            }
+            else
+            {
+                //SqlConnection con = new SqlConnection(conString);
+                con.Open();
+                for (int i = 0; i < techList.Items.Count; i++)
+                {
+                    string sql = "INSERT INTO Technicians(Name) VALUES ('" + techList.Items[i].ToString() + "')";
+                    SqlCommand cmd = new SqlCommand(sql, con);
+                    cmd.ExecuteNonQuery();
+                }
+                for (int i = 0; i < engList.Items.Count; i++)
+                {
+                    string sql = "INSERT INTO Engineers(Name) VALUES ('" + engList.Items[i].ToString() + "')";
+                    SqlCommand cmd = new SqlCommand(sql, con);
+                    cmd.ExecuteNonQuery();
+                }
+                this.Hide();
+                new FormLogin().Show();
+            }
+        }
+
     }
+
 }

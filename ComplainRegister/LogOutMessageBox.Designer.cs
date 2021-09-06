@@ -47,6 +47,7 @@ namespace ComplainRegister
             this.button5.TabIndex = 7;
             this.button5.Text = "Yes";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // button4
             // 
@@ -58,6 +59,7 @@ namespace ComplainRegister
             this.button4.TabIndex = 6;
             this.button4.Text = "No";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // label1
             // 
@@ -88,6 +90,7 @@ namespace ComplainRegister
             this.button1.TabIndex = 8;
             this.button1.Text = "r";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_click);
             // 
             // LogOutMessageBox
             // 
