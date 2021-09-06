@@ -13,6 +13,10 @@ namespace ComplainRegister
 {
     public partial class panel1 : Form
     {
+
+        static string path = Application.StartupPath;
+        string conString = "Data Source=" + path + "\\ComplaintsDatabase.sdf";
+        Point lastClick;
         public panel1()
         {
             InitializeComponent();
@@ -95,7 +99,7 @@ namespace ComplainRegister
             }
             else
             {
-                //SqlConnection con = new SqlConnection(conString);
+                SqlConnection con = new SqlConnection(conString);
                 con.Open();
                 for (int i = 0; i < techList.Items.Count; i++)
                 {
