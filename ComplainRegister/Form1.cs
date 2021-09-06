@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace ComplainRegister
 {
     public partial class Form1 : Form
@@ -16,6 +16,8 @@ namespace ComplainRegister
         {
             InitializeComponent();
         }
+        
+
         //error
         private void textBox3_TextChanged(object sender, EventArgs e)
         {

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ComplainRegister
 {
-    public partial class panel1 : Form
+    public partial class AddTechandEngineers : Form
     {
-        public panel1()
+        public AddTechandEngineers()
         {
             InitializeComponent();
         }
