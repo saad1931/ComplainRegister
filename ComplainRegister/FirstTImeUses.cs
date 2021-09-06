@@ -161,7 +161,7 @@ namespace ComplainRegister
                         }
                         con.Close();
                         this.Hide();
-                        new  AddTechandEngineers().Show();
+                        new  panel1().Show();
                     }
                     catch (Exception ex)
                     {

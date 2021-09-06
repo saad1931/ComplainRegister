@@ -1,7 +1,7 @@
 ﻿
 namespace ComplainRegister
 {
-    partial class AddTechandEngineers
+    partial class panel1
     {
         /// <summary>
         /// Required designer variable.
@@ -241,7 +241,7 @@ namespace ComplainRegister
             this.remo.Text = "Remove";
             this.remo.UseVisualStyleBackColor = true;
             // 
-            // AddTechandEngineers
+            // panel1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -267,7 +267,7 @@ namespace ComplainRegister
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddTechandEngineers";
+            this.Name = "panel1";
             this.Text = "AddTechAndEnginners";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.techLabelIcon)).EndInit();
