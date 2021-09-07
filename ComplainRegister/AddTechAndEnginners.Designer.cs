@@ -1,7 +1,7 @@
 ﻿
 namespace ComplainRegister
 {
-    partial class panel1
+    partial class AddTechandEngineers
     {
         /// <summary>
         /// Required designer variable.
@@ -161,6 +161,7 @@ namespace ComplainRegister
             this.button3.Size = new System.Drawing.Size(30, 27);
             this.button3.TabIndex = 40;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button2
             // 
@@ -171,6 +172,7 @@ namespace ComplainRegister
             this.button2.Size = new System.Drawing.Size(30, 27);
             this.button2.TabIndex = 39;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // pictureBox1
             // 
@@ -194,6 +196,7 @@ namespace ComplainRegister
             this.Continue.TabIndex = 36;
             this.Continue.Text = "Continue";
             this.Continue.UseVisualStyleBackColor = true;
+            this.Continue.Click += new System.EventHandler(this.Continue_Click_1);
             // 
             // techLabelIcon
             // 
@@ -227,6 +230,7 @@ namespace ComplainRegister
             this.button1.TabIndex = 50;
             this.button1.Text = "Remove";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // remo
             // 
@@ -240,8 +244,9 @@ namespace ComplainRegister
             this.remo.TabIndex = 33;
             this.remo.Text = "Remove";
             this.remo.UseVisualStyleBackColor = true;
+            this.remo.Click += new System.EventHandler(this.remo_Click_1);
             // 
-            // panel1
+            // AddTechandEngineers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -267,7 +272,7 @@ namespace ComplainRegister
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "panel1";
+            this.Name = "AddTechandEngineers";
             this.Text = "AddTechAndEnginners";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.techLabelIcon)).EndInit();

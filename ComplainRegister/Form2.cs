@@ -15,7 +15,7 @@ namespace ComplainRegister
     {
         Point lastClick;
         string path = Application.StartupPath;
-        string connectionString = "Server=51.89.37.225;Database=SampleDB;User=sa;Password=blue@1122;";
+        //string connectionString = "Server=51.89.37.225;Database=SampleDB;User=sa;Password=blue@1122;";
 
         public FormLogin()
         {
@@ -56,7 +56,7 @@ namespace ComplainRegister
 
         private void button5_Click(object sender, EventArgs e)
         {
-            SqlConnection con =new SqlConnection (@"Data Source=51.89.37.225;Initial Catalog=SampleDB;User ID=sa;Password=blue@1122");
+            /*SqlConnection con =new SqlConnection ("Data Source=DESKTOP-CT235QF;Initial Catalog=coomplain;Integrated Security=True");
             string query = "select * from ADMINISTRATOR where UserName '" + userTextBox.Text.Trim() + "' and password = '" + passwordTextBox.Text.Trim()+"'";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
             DataTable dtbl = new DataTable();
@@ -70,37 +70,37 @@ namespace ComplainRegister
             else
             {
                 MessageBox.Show("Please Check your username or Password");
-            }
-           
+            }*/
+            login();
        
         }
 
-        /*public void login()
+        public void login()
         {
             string check = "";
             try
             {
-                SqlConnection con = new SqlConnection("Server=51.89.37.225;Database=SampleDB;User=sa;Password=blue@1122;");
+                SqlConnection con = new SqlConnection("Data Source=DESKTOP-CT235QF;Initial Catalog=coomplain;Integrated Security=True");
                 con.Open();
                 if (con.State == System.Data.ConnectionState.Open)
                 {
-                    string sql = "SELECT * FROM ADMINISTRATOR ";
+                    string sql = "SELECT * FROM Users ";
                     SqlCommand cmd = new SqlCommand(sql, con);
                     SqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
-                        if (dr["UserName"].ToString() == userTextBox.Text && dr["password"].ToString() == passwordTextBox.Text && dr["Designation"].ToString() == "ADMINISTRATOR")
+                        if (dr["Username"].ToString() == userTextBox.Text && dr["password"].ToString() == passwordTextBox.Text && dr["designation"].ToString() == "operator")
                         {
-                            check = "ADMINISTRATOR";
+                            check = "operator";
                         }
-                      //  else if (dr["Username"].ToString() == userTextBox.Text && dr["Password"].ToString() == passwordTextBox.Text && dr["Designation"].ToString() == "Admin")
-                        //{
-                          //  check = "Admin";
-                        //}
+                        else if (dr["Username"].ToString() == userTextBox.Text && dr["password"].ToString() == passwordTextBox.Text && dr["designation"].ToString() == "Administrator")
+                        {
+                            check = "Administrator";
+                        }
                     }
                     con.Close();
                 }
-                if (check == "ADMINISTRATOR")
+                if (check == "operator")
                 {
                     this.Hide();
                     Form1 f = new Form1();
@@ -108,11 +108,16 @@ namespace ComplainRegister
                     f.Show();
 
                 }
-               
+                else if (check == "Administrator")
+                {
+                    this.Hide();
+                    new Form1().Show();
+                }
+
                 else if (check == "")
                 {
                     LogOutMessageBox log = new LogOutMessageBox();
-                    //log.makeOkButton("Incorrect username or Password. Please try again.");
+                    log.makeOkButton("Incorrect username or Password. Please try again.");
                     log.Size = new Size(600, 179);
                     log.button1.Location = new Point(562, 2);
                     log.Show();
@@ -123,11 +128,12 @@ namespace ComplainRegister
             {
                 Console.Write(ex);
             }
-        }*/
+        }
 
+        
 
     }
 
 
-    
+
 }

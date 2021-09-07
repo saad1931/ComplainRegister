@@ -48,5 +48,19 @@ namespace ComplainRegister
         {
             this.Dispose();
         }
+
+        public void makeOkButton(string labelText)
+        {
+            Point okButton = new Point(245, 119);
+            Point xButton = new Point(462, 2);
+            button4.Location = okButton;
+            button5.Hide();
+            button4.Text = "Ok";
+            button1.Location = xButton;
+            Size sz = new Size(500, 179);
+            this.Size = sz;
+            label1.Text = labelText;
+        }
+
     }
 }

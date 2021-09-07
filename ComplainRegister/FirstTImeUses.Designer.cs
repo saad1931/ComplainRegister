@@ -35,9 +35,6 @@ namespace ComplainRegister
             this.operatorExistLabel = new System.Windows.Forms.Label();
             this.duplicateUser = new System.Windows.Forms.Label();
             this.Accounts = new System.Windows.Forms.DataGridView();
-            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Designation = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.emptyUserLabel = new System.Windows.Forms.Label();
             this.duplicateUserIcon = new System.Windows.Forms.PictureBox();
             this.operatorExistIcon = new System.Windows.Forms.PictureBox();
@@ -46,8 +43,11 @@ namespace ComplainRegister
             this.emptyUserLabelIcon = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.UpdateButton = new System.Windows.Forms.Button();
+            this.CncelButton = new System.Windows.Forms.Button();
+            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Designation = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Accounts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.duplicateUserIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.operatorExistIcon)).BeginInit();
@@ -87,6 +87,7 @@ namespace ComplainRegister
             this.adminExistLabel.Size = new System.Drawing.Size(196, 20);
             this.adminExistLabel.TabIndex = 38;
             this.adminExistLabel.Text = "At least two admin accounts";
+            this.adminExistLabel.Click += new System.EventHandler(this.adminExistLabel_Click);
             // 
             // operatorExistLabel
             // 
@@ -125,25 +126,6 @@ namespace ComplainRegister
             this.Accounts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Accounts.Size = new System.Drawing.Size(394, 163);
             this.Accounts.TabIndex = 6;
-            // 
-            // Username
-            // 
-            this.Username.HeaderText = "Username";
-            this.Username.Name = "Username";
-            this.Username.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Password
-            // 
-            this.Password.HeaderText = "Password";
-            this.Password.Name = "Password";
-            this.Password.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Designation
-            // 
-            this.Designation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Designation.HeaderText = "Designation";
-            this.Designation.Name = "Designation";
-            this.Designation.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // emptyUserLabel
             // 
@@ -187,11 +169,11 @@ namespace ComplainRegister
             this.adminExistIcon.TabIndex = 51;
             this.adminExistIcon.TabStop = false;
             // 
-            // pictureBox1
+            // engLabelIcon
             // 
             this.engLabelIcon.Image = global::ComplainRegister.Properties.Resources.RESIZED_MORE;
             this.engLabelIcon.Location = new System.Drawing.Point(74, 38);
-            this.engLabelIcon.Name = "pictureBox1";
+            this.engLabelIcon.Name = "engLabelIcon";
             this.engLabelIcon.Size = new System.Drawing.Size(83, 91);
             this.engLabelIcon.TabIndex = 1;
             this.engLabelIcon.TabStop = false;
@@ -231,28 +213,51 @@ namespace ComplainRegister
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button1
+            // UpdateButton
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.button1.Location = new System.Drawing.Point(101, 577);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 56;
-            this.button1.Text = "Continue";
-            this.button1.UseVisualStyleBackColor = true;
+            this.UpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.UpdateButton.Location = new System.Drawing.Point(101, 577);
+            this.UpdateButton.Name = "UpdateButton";
+            this.UpdateButton.Size = new System.Drawing.Size(75, 23);
+            this.UpdateButton.TabIndex = 56;
+            this.UpdateButton.Text = "Continue";
+            this.UpdateButton.UseVisualStyleBackColor = true;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click_1);
             // 
-            // button2
+            // CncelButton
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.button2.Location = new System.Drawing.Point(207, 577);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 57;
-            this.button2.Text = "Exit";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.CncelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CncelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.CncelButton.Location = new System.Drawing.Point(207, 577);
+            this.CncelButton.Name = "CncelButton";
+            this.CncelButton.Size = new System.Drawing.Size(75, 23);
+            this.CncelButton.TabIndex = 57;
+            this.CncelButton.Text = "Exit";
+            this.CncelButton.UseVisualStyleBackColor = true;
+            this.CncelButton.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // Username
+            // 
+            this.Username.HeaderText = "Username";
+            this.Username.Name = "Username";
+            this.Username.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Password
+            // 
+            this.Password.HeaderText = "Password";
+            this.Password.Name = "Password";
+            this.Password.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Designation
+            // 
+            this.Designation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Designation.HeaderText = "Designation";
+            this.Designation.Items.AddRange(new object[] {
+            "Administrator",
+            "Operator"});
+            this.Designation.Name = "Designation";
+            this.Designation.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // FirstTImeUses
             // 
@@ -260,8 +265,8 @@ namespace ComplainRegister
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(391, 638);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.CncelButton);
+            this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.emptyUserLabelIcon);
@@ -299,9 +304,6 @@ namespace ComplainRegister
         private System.Windows.Forms.Label operatorExistLabel;
         private System.Windows.Forms.Label duplicateUser;
         private System.Windows.Forms.DataGridView Accounts;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Designation;
         private System.Windows.Forms.Label emptyUserLabel;
         private System.Windows.Forms.PictureBox adminExistIcon;
         private System.Windows.Forms.PictureBox operatorExistIcon;
@@ -309,7 +311,10 @@ namespace ComplainRegister
         private System.Windows.Forms.PictureBox emptyUserLabelIcon;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button UpdateButton;
+        private System.Windows.Forms.Button CncelButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Designation;
     }
 }

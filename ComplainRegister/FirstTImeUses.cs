@@ -41,7 +41,7 @@ namespace ComplainRegister
             Application.Exit();
         }
 
-        //error2
+
         private void button5_Click(object sender, EventArgs e)
         {
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
@@ -61,7 +61,7 @@ namespace ComplainRegister
                 for (int i = 0; i < Accounts.RowCount - a; i++)
                 {
 
-                    if (Accounts.Rows[i].Cells[2].Value.ToString() == "Admin")
+                    if (Accounts.Rows[i].Cells[2].Value.ToString() == "Administrator")
                     {
                         adminCount++;
                         if (adminCount >= 2)
@@ -76,7 +76,7 @@ namespace ComplainRegister
                 for (int i = 0; i < Accounts.RowCount - a; i++)
                 {
 
-                    if (Accounts.Rows[i].Cells[2].Value.ToString() == "Operator")
+                    if (Accounts.Rows[i].Cells[2].Value.ToString() == "operator")
                     {
                         operatorCount++;
                         if (operatorCount >= 2)
@@ -107,71 +107,6 @@ namespace ComplainRegister
         }
 
 
-        private void UpdateButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                for (int i = 0; i < Accounts.RowCount - 1; i++)
-                {
-                    if (Accounts.Rows[i].Cells[0].Value == null)
-                    {
-                        Accounts.Rows[i].Cells[0].Value = "";
-                    }
-                }
-                for (int i = 0; i < Accounts.RowCount - 1; i++)
-                {
-                    if (Accounts.Rows[i].Cells[0].Value.ToString() == "")
-                    {
-                        emptyUserLabel.ForeColor = Color.Red;
-                        emptyUserLabelIcon.Image = ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
-                    }
-                    else
-                    {
-                        emptyUserLabel.ForeColor = Color.Green;
-                        emptyUserLabelIcon.Image = ComplainRegister.Properties.Resources.CHECK_GREEN_RESIZED;
-                    }
-                }
-                userDuplication();
-                validation();
-
-
-                if (duplicateUser.ForeColor == Color.Red || adminExistLabel.ForeColor == Color.Red || operatorExistLabel.ForeColor == Color.Red || duplicateUser.ForeColor == Color.Red || emptyUserLabel.ForeColor == Color.Red)
-                {
-                    LogOutMessageBox log = new LogOutMessageBox();
-                    //log.makeOkButton("One or more requirements not fulfilled.");
-                    log.Size = new Size(log.Width + 10, log.Height);
-                    //log.SetCrossLocation(log.button1.Location.X + 12, log.button1.Location.Y);
-                    log.Show();
-                }
-                else
-                {
-                    try
-                    {
-                        SqlConnection con = new SqlConnection("Data Source=51.89.37.225;Initial Catalog=SampleDB;User ID=sa;Password=***********");
-                        con.Open();
-                        for (int i = 0; i < Accounts.RowCount - 1; i++)
-                        {
-                            string sql = "INSERT INTO Users (username,password,designation) VALUES (@usr,@pss,@desig)";
-                            SqlCommand cmd = new SqlCommand(sql, con);
-
-                            cmd.Parameters.AddWithValue("@usr", Accounts.Rows[i].Cells[0].Value.ToString());
-                            cmd.Parameters.AddWithValue("@pss", Accounts.Rows[i].Cells[1].Value.ToString());
-                            cmd.Parameters.AddWithValue("@desig", Accounts.Rows[i].Cells[2].Value.ToString());
-                            cmd.ExecuteNonQuery();
-                        }
-                        con.Close();
-                        this.Hide();
-                        new  panel1().Show();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.ToString());
-                    }
-                }
-            }
-            catch { }
-        }
-
         private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
             for (int i = 0; i < Accounts.RowCount - 1; i++)
@@ -184,6 +119,7 @@ namespace ComplainRegister
             }
 
         }
+
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -326,6 +262,77 @@ namespace ComplainRegister
                 }
             }
         }
+
+        private void UpdateButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                for (int i = 0; i < Accounts.RowCount - 1; i++)
+                {
+                    if (Accounts.Rows[i].Cells[0].Value == null)
+                    {
+                        Accounts.Rows[i].Cells[0].Value = "";
+                    }
+                }
+                for (int i = 0; i < Accounts.RowCount - 1; i++)
+                {
+                    if (Accounts.Rows[i].Cells[0].Value.ToString() == "")
+                    {
+                        emptyUserLabel.ForeColor = Color.Red;
+                        emptyUserLabelIcon.Image = ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
+                    }
+                    else
+                    {
+                        emptyUserLabel.ForeColor = Color.Green;
+                        emptyUserLabelIcon.Image = ComplainRegister.Properties.Resources.CHECK_GREEN_RESIZED;
+                    }
+                }
+                userDuplication();
+                validation();
+
+
+                if (duplicateUser.ForeColor == Color.Red || adminExistLabel.ForeColor == Color.Red || operatorExistLabel.ForeColor == Color.Red || duplicateUser.ForeColor == Color.Red || emptyUserLabel.ForeColor == Color.Red)
+                {
+                    LogOutMessageBox log = new LogOutMessageBox();
+                    log.makeOkButton("One or more requirements not fulfilled.");
+                    log.Size = new Size(log.Width + 10, log.Height);
+                    log.SetCrossLocation(log.button1.Location.X + 12, log.button1.Location.Y);
+                    log.Show();
+                }
+                else
+                {
+                    try
+                    {
+                        SqlConnection con = new SqlConnection(@"Data Source = DESKTOP - CT235QF; Initial Catalog = coomplain; Integrated Security = True");
+                        con.Open();
+                        for (int i = 0; i < Accounts.RowCount - 1; i++)
+                        {
+                            string sql = "INSERT INTO Users (username,password,designation) VALUES (@usr,@pss,@desig)";
+                            SqlCommand cmd = new SqlCommand(sql, con);
+
+                            cmd.Parameters.AddWithValue("@usr", Accounts.Rows[i].Cells[0].Value.ToString());
+                            cmd.Parameters.AddWithValue("@pss", Accounts.Rows[i].Cells[1].Value.ToString());
+                            cmd.Parameters.AddWithValue("@desig", Accounts.Rows[i].Cells[2].Value.ToString());
+                            cmd.ExecuteNonQuery();
+                        }
+                        con.Close();
+                        this.Hide();
+                        new AddTechandEngineers().Show();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                }
+            }
+            catch { }
+        }
+
+        private void adminExistLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
         public void validation()
         {
             adminsAndOperatorsAdded();

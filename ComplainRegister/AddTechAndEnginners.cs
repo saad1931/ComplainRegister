@@ -11,17 +11,18 @@ using System.Data.SqlClient;
 
 namespace ComplainRegister
 {
-    public partial class panel1 : Form
+    public partial class AddTechandEngineers : Form
     {
 
         static string path = Application.StartupPath;
-        string conString = "Data Source=" + path + "\\ComplaintsDatabase.sdf";
+        string conString = "Data Source=DESKTOP-CT235QF;Initial Catalog=coomplain;Integrated Security=True";
         Point lastClick;
-        public panel1()
+        public AddTechandEngineers()
         {
             InitializeComponent();
         }
-        private void button2_click(object sender, EventArgs e)
+
+        private void button2_Click_1(object sender, EventArgs e)
         {
             if (technicianBox.Text != "")
             {
@@ -29,7 +30,8 @@ namespace ComplainRegister
                 technicianBox.Clear();
             }
         }
-        private void button3_click(object sender, EventArgs e)
+
+        private void button3_Click_1(object sender, EventArgs e)
         {
             if (engineerBox.Text != "")
             {
@@ -37,62 +39,71 @@ namespace ComplainRegister
                 engineerBox.Clear();
             }
         }
-        private void remo_Click(object sender, EventArgs e)
+
+        private void remo_Click_1(object sender, EventArgs e)
         {
+            //techList.Items.Remove(techList.SelectedItems);
             techList.Items.Remove(techList.SelectedItem);
         }
-        private void button1_click(object sender, EventArgs e)
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
+
             engList.Items.Remove(engList.SelectedItem);
         }
-        private void technicanBox_keyPress(object sender, KeyPressEventArgs e)
-        {
-            if (techList.Items.Count >= 2)
-            {
-                techLabelIcon.Image = ComplainRegister.Properties.Resources.CHECK_GREEN_RESIZED;
-                techLabel.ForeColor = Color.Green;
-            }
-            else
-            {
-                techLabelIcon.Image = ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
-                techLabel.ForeColor = Color.Red;
-            }
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                techList.Items.Add(technicianBox.Text);
-                technicianBox.Clear();
-            }
-        }
-        private void engineerBox_keyPress(object sender, KeyPressEventArgs e)
-        {
-            if (engList.Items.Count >= 2)
-            {
-                engLabelIcon.Image = ComplainRegister.Properties.Resources.CHECK_GREEN_RESIZED;
-                engLabel.ForeColor = Color.Green;
-            }
-            else
-            {
-                engLabelIcon.Image = ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
-                engLabel.ForeColor = Color.Red;
-            }
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                engList.Items.Add(technicianBox.Text);
-                engineerBox.Clear(); 
-            }
 
-        }
-        private void Continue_click(object sender, EventArgs e)
+        private void Continue_Click_1(object sender, EventArgs e)
         {
             continueToLogin();
         }
+
+
+        private void technicanBox_keyPress(object sender, KeyPressEventArgs e)
+         {
+             if (techList.Items.Count >= 2)
+             {
+                
+                 techLabelIcon.Image = ComplainRegister.Properties.Resources.CHECK_GREEN_RESIZED;
+                 techLabel.ForeColor = Color.Green;
+             }
+             else
+             {
+                 techLabelIcon.Image = ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
+                 techLabel.ForeColor = Color.Red;
+             }
+             if (e.KeyChar == (char)Keys.Enter)
+             {
+                 techList.Items.Add(technicianBox.Text);
+                 technicianBox.Clear();
+             }
+         }
+         private void engineerBox_keyPress(object sender, KeyPressEventArgs e)
+         {
+             if (engList.Items.Count >= 2)
+             {
+                 engLabelIcon.Image = ComplainRegister.Properties.Resources.CHECK_GREEN_RESIZED;
+                 engLabel.ForeColor = Color.Green;
+             }
+             else
+             {
+                 engLabelIcon.Image = ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
+                 engLabel.ForeColor = Color.Red;
+             }
+             if (e.KeyChar == (char)Keys.Enter)
+             {
+                 engList.Items.Add(technicianBox.Text);
+                 engineerBox.Clear(); 
+             }
+
+         }
+
 
         public void continueToLogin()
         {
             if (techLabel.ForeColor == Color.Red || engLabel.ForeColor == Color.Red)
             {
                 LogOutMessageBox log = new LogOutMessageBox();
-                //log.makeOkButton("One or more requirements not fulfilled.");
+                log.makeOkButton("One or more requirements not fulfilled.");
                 log.Size = new Size(log.Width + 10, log.Height);
                 log.SetCrossLocation(log.button1.Location.X + 12, log.button1.Location.Y);
                 log.Show();
@@ -118,6 +129,12 @@ namespace ComplainRegister
             }
         }
 
+       
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastClick = e.Location;
+        }
     }
 
 }
