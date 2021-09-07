@@ -440,7 +440,7 @@ namespace ComplainRegister
                         adap = new SqlDataAdapter("SELECT * FROM ComplainDetails", con);
                         DataTable dt = new DataTable();
                         adap.Fill(dt);
-                        tabControl1.DataSource = dt;
+                        dataGridView1.DataSource = dt;
                         if (dt.Rows.Count < 1)
                         {
                             LogOutMessageBox log = new LogOutMessageBox();
@@ -454,7 +454,7 @@ namespace ComplainRegister
                         adap = new SqlDataAdapter("SELECT * FROM ComplainDetails WHERE ClientName='" + cNameSearch.Text + "'", con);
                         DataTable dt = new DataTable();
                         adap.Fill(dt);
-                        tabControl1.DataSource = dt;
+                        dataGridView1.DataSource = dt;
                         if (dt.Rows.Count < 1)
                         {
                             LogOutMessageBox log = new LogOutMessageBox();
@@ -470,7 +470,7 @@ namespace ComplainRegister
                             adap = new SqlDataAdapter("SELECT * FROM ComplainDetails WHERE ComplaintID='" + compIDSearch.Text + "'", con);
                             DataTable dt = new DataTable();
                             adap.Fill(dt);
-                            tabControl1.DataSource = dt;
+                            dataGridView1.DataSource = dt;
                             if (dt.Rows.Count < 1)
                             {
                                 LogOutMessageBox log = new LogOutMessageBox();
@@ -493,7 +493,7 @@ namespace ComplainRegister
                                 + "'", con);
                             DataTable dt = new DataTable();
                             adap.Fill(dt);
-                            tabControl1.DataSource = dt;
+                            dataGridView1.DataSource = dt;
                             if (dt.Rows.Count < 1)
                             {
                                 LogOutMessageBox log = new LogOutMessageBox();
@@ -513,7 +513,8 @@ namespace ComplainRegister
                         adap = new SqlDataAdapter("SELECT * FROM ComplainDetails WHERE CityRegion='" + cityRegionSearch.Text + "'", con);
                         DataTable dt = new DataTable();
                         adap.Fill(dt);
-                        tabControl1.DataSource = dt;
+                        dataGridView1.DataSource = dt;
+                        // Got it? Okay let me know if anything else needed
                         if (dt.Rows.Count < 1)
                         {
                             LogOutMessageBox log = new LogOutMessageBox();
@@ -526,7 +527,7 @@ namespace ComplainRegister
                         adap = new SqlDataAdapter("SELECT * FROM ComplainDetails WHERE ClientName='" + cNameSearch.Text + "' AND CityRegion='" + cityRegionSearch.Text + "'", con);
                         DataTable dt = new DataTable();
                         adap.Fill(dt);
-                        tabControl1.DataSource = dt;
+                        dataGridView1.DataSource = dt;
                         if (dt.Rows.Count < 1)
                         {
                             LogOutMessageBox log = new LogOutMessageBox();
@@ -541,7 +542,7 @@ namespace ComplainRegister
                             adap = new SqlDataAdapter("SELECT * FROM ComplainDetails WHERE ClientName='" + cNameSearch.Text + "' AND ComplaintID='" + compIDSearch.Text + "'AND CityRegion='" + cityRegionSearch.Text + "'", con);
                             DataTable dt = new DataTable();
                             adap.Fill(dt);
-                            tabControl1.DataSource = dt;
+                            dataGridView1.DataSource = dt;
                             if (dt.Rows.Count < 1)
                             {
                                 LogOutMessageBox log = new LogOutMessageBox();
@@ -563,7 +564,7 @@ namespace ComplainRegister
                             adap = new SqlDataAdapter("SELECT * FROM ComplainDetails WHERE CityRegion='" + cityRegionSearch.Text + "' AND ComplaintID='" + compIDSearch.Text + "'", con);
                             DataTable dt = new DataTable();
                             adap.Fill(dt);
-                            tabControl1.DataSource = dt;
+                            dataGridView1.DataSource = dt;
                             if (dt.Rows.Count < 1)
                             {
                                 LogOutMessageBox log = new LogOutMessageBox();
@@ -583,7 +584,7 @@ namespace ComplainRegister
                         adap = new SqlDataAdapter("SELECT * FROM ComplainDetails WHERE Status='" + statusSearch.Text + "'", con);
                         DataTable dt = new DataTable();
                         adap.Fill(dt);
-                        tabControl1.DataSource = dt;
+                        dataGridView1.DataSource = dt;
                         if (dt.Rows.Count < 1)
                         {
                             LogOutMessageBox log = new LogOutMessageBox();
@@ -596,7 +597,7 @@ namespace ComplainRegister
                         adap = new SqlDataAdapter("SELECT * FROM ComplainDetails WHERE Status='" + statusSearch.Text + "' AND CityRegion='" + cityRegionSearch.Text + "'", con);
                         DataTable dt = new DataTable();
                         adap.Fill(dt);
-                        tabControl1.DataSource = dt;
+                        dataGridView1.DataSource = dt;
                         if (dt.Rows.Count < 1)
                         {
                             LogOutMessageBox log = new LogOutMessageBox();
@@ -609,7 +610,7 @@ namespace ComplainRegister
                         adap = new SqlDataAdapter("SELECT * FROM ComplainDetails WHERE Status='" + statusSearch.Text + "' AND CityRegion='" + cityRegionSearch.Text + "' AND ClientName='" + cNameSearch.Text + "'", con);
                         DataTable dt = new DataTable();
                         adap.Fill(dt);
-                        tabControl1.DataSource = dt;
+                        dataGridView1.DataSource = dt;
                         if (dt.Rows.Count < 1)
                         {
                             LogOutMessageBox log = new LogOutMessageBox();
@@ -624,7 +625,7 @@ namespace ComplainRegister
                             adap = new SqlDataAdapter("SELECT * FROM ComplainDetails WHERE Status='" + statusSearch.Text + "' AND CityRegion='" + cityRegionSearch.Text + "' AND ClientName='" + cNameSearch.Text + "'  AND ComplaintID='" + compIDSearch.Text + "'", con);
                             DataTable dt = new DataTable();
                             adap.Fill(dt);
-                            tabControl1.DataSource = dt;
+                            dataGridView1.DataSource = dt;
                             if (dt.Rows.Count < 1)
                             {
                                 LogOutMessageBox log = new LogOutMessageBox();
@@ -646,7 +647,7 @@ namespace ComplainRegister
                             adap = new SqlDataAdapter("SELECT * FROM ComplainDetails WHERE Status='" + statusSearch.Text + "' AND ClientName='" + cNameSearch.Text + "'  AND ComplaintID='" + compIDSearch.Text + "'", con);
                             DataTable dt = new DataTable();
                             adap.Fill(dt);
-                            tabControl1.DataSource = dt;
+                            dataGridView1.DataSource = dt;
                             if (dt.Rows.Count < 1)
                             {
                                 LogOutMessageBox log = new LogOutMessageBox();
@@ -668,7 +669,7 @@ namespace ComplainRegister
                             adap = new SqlDataAdapter("SELECT * FROM ComplainDetails WHERE Status='" + statusSearch.Text + "' AND CityRegion='" + cityRegionSearch.Text + "' AND ComplaintID='" + compIDSearch.Text + "'", con);
                             DataTable dt = new DataTable();
                             adap.Fill(dt);
-                            tabControl1.DataSource = dt;
+                            dataGridView1.DataSource = dt;
                             if (dt.Rows.Count < 1)
                             {
                                 LogOutMessageBox log = new LogOutMessageBox();
@@ -690,7 +691,7 @@ namespace ComplainRegister
                             adap = new SqlDataAdapter("SELECT * FROM ComplainDetails WHERE Status='" + statusSearch.Text + "' AND ComplaintID='" + compIDSearch.Text + "'", con);
                             DataTable dt = new DataTable();
                             adap.Fill(dt);
-                            tabControl1.DataSource = dt;
+                            dataGridView1.DataSource = dt;
                             if (dt.Rows.Count < 1)
                             {
                                 LogOutMessageBox log = new LogOutMessageBox();
@@ -710,7 +711,7 @@ namespace ComplainRegister
                         adap = new SqlDataAdapter("SELECT * FROM ComplainDetails WHERE Status='" + statusSearch.Text + "' AND ClientName='" + cNameSearch.Text + "'", con);
                         DataTable dt = new DataTable();
                         adap.Fill(dt);
-                        tabControl1.DataSource = dt;
+                        dataGridView1.DataSource = dt;
                         if (dt.Rows.Count < 1)
                         {
                             LogOutMessageBox log = new LogOutMessageBox();
@@ -926,18 +927,18 @@ namespace ComplainRegister
 
 
             string cname, prdct, dtails, dte, ctyrgn, eml = "", phne = "", stts, technicians, engineers;
-            if (tabControl1.Rows.Count > 0)
+            if (dataGridView1.Rows.Count > 0)
             {
                 try
                 {
-                    CompID = int.Parse(tabControl1.SelectedRows[0].Cells[0].Value.ToString());
-                    cname = tabControl1.SelectedRows[0].Cells[1].Value.ToString();
-                    dtails = tabControl1.SelectedRows[0].Cells[2].Value.ToString();
-                    dte = tabControl1.SelectedRows[0].Cells[3].Value.ToString();
-                    stts = tabControl1.SelectedRows[0].Cells[4].Value.ToString();
-                    technicians = tabControl1.SelectedRows[0].Cells[5].Value.ToString();
-                    engineers = tabControl1.SelectedRows[0].Cells[6].Value.ToString();
-                    prdct = tabControl1.SelectedRows[0].Cells[7].Value.ToString();
+                    CompID = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+                    cname = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                    dtails = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+                    dte = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+                    stts = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+                    technicians = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+                    engineers = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
+                    prdct = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
                     ctyrgn = tabControl1.SelectedRows[0].Cells[8].Value.ToString();
                     SqlConnection con = new SqlConnection(conString);
                     con.Open();
