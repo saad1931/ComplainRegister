@@ -12,6 +12,9 @@ namespace ComplainRegister
 {
     public partial class LogOutMessageBox : Form
     {
+        Point LastClick;
+        public bool deleteIsClicked;
+
         public LogOutMessageBox()
         {
             InitializeComponent();
@@ -48,6 +51,25 @@ namespace ComplainRegister
         {
             this.Dispose();
         }
+        
+        private void panel1_Mousedown(object sender, MouseEventArgs e)
+        {
+            LastClick = e.Location;
+        }
+        private void panel1_MouseMove( object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - LastClick.X;
+                this.Top += e.Y - LastClick.Y;
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.DarkGray, 2, ButtonBorderStyle.Outset, Color.DarkGray, 2, ButtonBorderStyle.Outset, Color.DarkGray, 1, ButtonBorderStyle.Solid, Color.DarkGray, 1, ButtonBorderStyle.Solid);
+
+        }
 
         public void makeOkButton(string labelText)
         {
@@ -60,6 +82,10 @@ namespace ComplainRegister
             Size sz = new Size(500, 179);
             this.Size = sz;
             label1.Text = labelText;
+        }
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
         }
 
     }
