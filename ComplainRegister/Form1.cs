@@ -939,10 +939,10 @@ namespace ComplainRegister
                     technicians = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
                     engineers = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
                     prdct = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
-                    ctyrgn = tabControl1.SelectedRows[0].Cells[8].Value.ToString();
+                    ctyrgn = dataGridView1.SelectedRows[0].Cells[8].Value.ToString();
                     SqlConnection con = new SqlConnection(conString);
                     con.Open();
-                    string sql = "SELECT * FROM ClientDetail WHERE ClientName='" + tabControl1.SelectedRows[0].Cells[1].Value.ToString() + "'";
+                    string sql = "SELECT * FROM ClientDetail WHERE ClientName='" + dataGridView1.SelectedRows[0].Cells[1].Value.ToString() + "'";
                     SqlCommand cmd = new SqlCommand(sql, con);
                     SqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
@@ -964,7 +964,7 @@ namespace ComplainRegister
                     MessageBox.Show(ex.ToString());
                 }
             }
-            else if (tabControl1.Rows.Count > 0 && tabControl1.SelectedRows.Count == 0)
+            else if (dataGridView1.Rows.Count > 0 && dataGridView1.SelectedRows.Count == 0)
             {
                 LogOutMessageBox log = new LogOutMessageBox();
                 log.makeOkButton("No complaint was selected.");
@@ -987,9 +987,9 @@ namespace ComplainRegister
             string compID;
             try
             {
-                string stts = tabControl1.SelectedRows[0].Cells[4].Value.ToString();
+                string stts = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
 
-                compID = tabControl1.SelectedRows[0].Cells[0].Value.ToString();
+                compID = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
                 SqlConnection con = new SqlConnection(conString);
                 con.Open();
                 if (stts != "Completed")
@@ -1023,7 +1023,7 @@ namespace ComplainRegister
             {
                 try
                 {
-                    string compID = tabControl1.SelectedRows[0].Cells[0].Value.ToString();
+                    string compID = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
                     SqlConnection con = new SqlConnection(conString);
                     con.Open();
                     string sql = "DELETE FROM ComplainDetails WHERE ComplaintID='" + compID + "'";
