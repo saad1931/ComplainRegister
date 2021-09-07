@@ -84,6 +84,7 @@ namespace ComplainRegister
             this.oldPass.Name = "oldPass";
             this.oldPass.Size = new System.Drawing.Size(165, 31);
             this.oldPass.TabIndex = 41;
+            this.oldPass.TextChanged += new System.EventHandler(this.oldPass_TextChanged_1);
             // 
             // newPass
             // 
@@ -101,6 +102,7 @@ namespace ComplainRegister
             this.confirmPass.Name = "confirmPass";
             this.confirmPass.Size = new System.Drawing.Size(165, 31);
             this.confirmPass.TabIndex = 43;
+            this.confirmPass.TextChanged += new System.EventHandler(this.confirmPass_TextChanged);
             // 
             // userPassMatched
             // 
@@ -135,6 +137,7 @@ namespace ComplainRegister
             this.button12.Text = "Update Password";
             this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click_1);
             // 
             // button1
             // 
@@ -149,6 +152,7 @@ namespace ComplainRegister
             this.button1.Text = "Cancel Update";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // passConfirmIcon
             // 
@@ -180,6 +184,7 @@ namespace ComplainRegister
             this.button4.TabIndex = 50;
             this.button4.Text = "r";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // ChangeOwnPass
             // 

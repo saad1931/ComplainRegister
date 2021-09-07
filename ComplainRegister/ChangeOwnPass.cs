@@ -26,22 +26,37 @@ namespace ComplainRegister
             InitializeComponent();
             this.currentUser = currentUser;
         }
-        private void oldPass_TextChanged(object sender, EventArgs e)
+        /*private void panel2_MouseDown(object sender, MouseEventArgs e)
         {
-            string pass = "",user="";
+            lastClick = e.Location;
+        }
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.Left += e.X - lastClick.X;
+            this.Top += e.Y - lastClick.Y;
+        }*/
+       
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void oldPass_TextChanged_1(object sender, EventArgs e)
+        {
+            string pass = "", user = "";
             try
             {
                 SqlConnection con = new SqlConnection(conString);
                 con.Open();
-                string sql = "SELECT FORM USERS WHERE Username ='" + currentUser + "'" ;
-                SqlCommand cmd = new SqlCommand(sql,con);
+                string sql = "SELECT FORM USERS WHERE Username ='" + currentUser + "'";
+                SqlCommand cmd = new SqlCommand(sql, con);
                 SqlDataReader dr = cmd.ExecuteReader();
-                while(dr.Read())
+                while (dr.Read())
                 {
                     user = dr["Username"].ToString();
                     pass = dr["Password"].ToString();
                 }
-                if(currentUser == user && oldPass.Text == pass)
+                if (currentUser == user && oldPass.Text == pass)
                 {
                     userPassMatched.ForeColor = Color.Green;
                     userPassMatchedIcon.Image = ComplainRegister.Properties.Resources.CHECK_GREEN_RESIZED;
@@ -51,22 +66,20 @@ namespace ComplainRegister
                     userPassMatched.ForeColor = Color.Red;
                     userPassMatchedIcon.Image = ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
                 }
-                  
+
 
             }
             catch { }
         }
-        private void button4_Click(object sender, EventArgs e)
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             this.Hide();
         }
-        private void button1_Click(object sender, EventArgs e)
+
+        private void confirmPass_TextChanged(object sender, EventArgs e)
         {
-            this.Hide();
-        }
-        private void comfirmPass_TextChanged(object sender, EventArgs e)
-        {
-            if(newPass.Text == confirmPass.Text)
+            if (newPass.Text == confirmPass.Text)
             {
                 userPassMatched.ForeColor = Color.Green;
                 userPassMatchedIcon.Image = ComplainRegister.Properties.Resources.CHECK_GREEN_RESIZED;
@@ -77,18 +90,10 @@ namespace ComplainRegister
                 userPassMatchedIcon.Image = ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
             }
         }
-        private void panel2_MouseDown(object sender, MouseEventArgs e)
+
+        private void button12_Click_1(object sender, EventArgs e)
         {
-            lastClick = e.Location;
-        }
-        private void panel2_MouseMove(object sender, MouseEventArgs e)
-        {
-            this.Left += e.X - lastClick.X;
-            this.Top += e.Y - lastClick.Y;
-        }
-        private void button12_Click(object sender, EventArgs e)
-        {
-            if(confirmPass.ForeColor == Color.Green && userPassMatched.ForeColor == Color.Green)
+            if (confirmPass.ForeColor == Color.Green && userPassMatched.ForeColor == Color.Green)
                 try
                 {
                     SqlConnection con = new SqlConnection(conString);
@@ -113,7 +118,7 @@ namespace ComplainRegister
                 {
                     MessageBox.Show(ex.ToString());
                 }
-       
+
         }
     }
 }
