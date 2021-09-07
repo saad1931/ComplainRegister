@@ -16,7 +16,7 @@ namespace ComplainRegister
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddTechandEngineers());
+            Application.Run(new FirstTImeUses());
         }
     }
 }

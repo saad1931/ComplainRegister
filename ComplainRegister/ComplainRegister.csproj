@@ -58,6 +58,8 @@
     <Compile Include="ChangeOwnPass.Designer.cs">
       <DependentUpon>ChangeOwnPass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Complaint.cs" />
+    <Compile Include="ConnectionClass.cs" />
     <Compile Include="FirstTImeUses.cs">
       <SubType>Form</SubType>
     </Compile>

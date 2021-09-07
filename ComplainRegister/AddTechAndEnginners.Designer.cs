@@ -80,6 +80,8 @@ namespace ComplainRegister
             this.technicianBox.Name = "technicianBox";
             this.technicianBox.Size = new System.Drawing.Size(133, 27);
             this.technicianBox.TabIndex = 37;
+            this.technicianBox.TextChanged += new System.EventHandler(this.technicianBox_TextChanged);
+            this.technicianBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.technicanBox_keyPress);
             // 
             // engineerBox
             // 

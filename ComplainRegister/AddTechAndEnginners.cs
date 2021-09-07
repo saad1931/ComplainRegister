@@ -135,6 +135,11 @@ namespace ComplainRegister
         {
             lastClick = e.Location;
         }
+
+        private void technicianBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
