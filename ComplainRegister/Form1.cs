@@ -32,7 +32,7 @@ namespace ComplainRegister
             clientNameComboItems();
             ClientBasicInfo();
             searchNameAutoComplete();
-            //statusCombo.SelectedIndex = 0;
+            statusCombo.SelectedIndex = 0;
             if (cNameCombo.SelectedItem.ToString() == "New Client")
             {
                 phone.Enabled = true;

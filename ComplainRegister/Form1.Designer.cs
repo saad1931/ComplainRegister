@@ -302,6 +302,9 @@ namespace ComplainRegister
             // statusCombo
             // 
             this.statusCombo.FormattingEnabled = true;
+            this.statusCombo.Items.AddRange(new object[] {
+            "Pending",
+            "Completed"});
             this.statusCombo.Location = new System.Drawing.Point(296, 298);
             this.statusCombo.Name = "statusCombo";
             this.statusCombo.Size = new System.Drawing.Size(240, 24);
