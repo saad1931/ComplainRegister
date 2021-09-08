@@ -91,6 +91,7 @@ namespace ComplainRegister
             this.engineerBox.Name = "engineerBox";
             this.engineerBox.Size = new System.Drawing.Size(133, 27);
             this.engineerBox.TabIndex = 38;
+            this.engineerBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.engineerBox_keyPress);
             // 
             // techList
             // 
@@ -276,6 +277,8 @@ namespace ComplainRegister
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddTechandEngineers";
             this.Text = "AddTechAndEnginners";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.techLabelIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.engLabelIcon)).EndInit();
