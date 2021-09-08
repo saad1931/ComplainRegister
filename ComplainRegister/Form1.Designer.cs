@@ -63,6 +63,7 @@ namespace ComplainRegister
             this.label3 = new System.Windows.Forms.Label();
             this.RegisterHeading = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button9 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -93,32 +94,31 @@ namespace ComplainRegister
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.ChangeUserPass = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panel1.Controls.Add(this.tabControl1);
-            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 2);
             this.panel1.Name = "panel1";
@@ -178,6 +178,8 @@ namespace ComplainRegister
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Register Complaint";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
+            this.tabPage1.Leave += new System.EventHandler(this.tabPage1_Leave);
             // 
             // cNameCombo
             // 
@@ -186,6 +188,8 @@ namespace ComplainRegister
             this.cNameCombo.Name = "cNameCombo";
             this.cNameCombo.Size = new System.Drawing.Size(240, 24);
             this.cNameCombo.TabIndex = 29;
+            this.cNameCombo.SelectionChangeCommitted += new System.EventHandler(this.cNameCombo_SelectionChangeCommitted);
+            this.cNameCombo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cNameCombo_KeyPress);
             // 
             // pictureBox2
             // 
@@ -283,6 +287,7 @@ namespace ComplainRegister
             this.engCombo.Name = "engCombo";
             this.engCombo.Size = new System.Drawing.Size(190, 24);
             this.engCombo.TabIndex = 17;
+            this.engCombo.SelectionChangeCommitted += new System.EventHandler(this.engCombo_SelectionChangeCommitted);
             // 
             // techCombo
             // 
@@ -291,6 +296,8 @@ namespace ComplainRegister
             this.techCombo.Name = "techCombo";
             this.techCombo.Size = new System.Drawing.Size(240, 24);
             this.techCombo.TabIndex = 16;
+            this.techCombo.SelectionChangeCommitted += new System.EventHandler(this.techCombo_SelectionChangeCommitted);
+            this.techCombo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.techCombo_KeyPress);
             // 
             // statusCombo
             // 
@@ -453,6 +460,14 @@ namespace ComplainRegister
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(419, 418);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 14;
             // 
             // pictureBox3
             // 
@@ -678,6 +693,7 @@ namespace ComplainRegister
             this.confirmPass.Size = new System.Drawing.Size(226, 22);
             this.confirmPass.TabIndex = 9;
             this.confirmPass.TextChanged += new System.EventHandler(this.confirmPass_TextChanged);
+            this.confirmPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.confirmPass_KeyPress);
             // 
             // newPass
             // 
@@ -685,6 +701,7 @@ namespace ComplainRegister
             this.newPass.Name = "newPass";
             this.newPass.Size = new System.Drawing.Size(226, 22);
             this.newPass.TabIndex = 8;
+            this.newPass.Enter += new System.EventHandler(this.newPass_Enter);
             // 
             // oldPass
             // 
@@ -692,6 +709,7 @@ namespace ComplainRegister
             this.oldPass.Name = "oldPass";
             this.oldPass.Size = new System.Drawing.Size(226, 22);
             this.oldPass.TabIndex = 7;
+            this.oldPass.TextChanged += new System.EventHandler(this.oldPass_TextChanged);
             // 
             // userChangePass
             // 
@@ -750,19 +768,21 @@ namespace ComplainRegister
             this.label18.TabIndex = 0;
             this.label18.Text = "Change Operator/Admin Password";
             // 
-            // panel2
+            // panel3
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.ChangeUserPass);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(-2, -1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(876, 36);
-            this.panel2.TabIndex = 0;
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.button4);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.ChangeUserPass);
+            this.panel3.Controls.Add(this.button5);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Location = new System.Drawing.Point(-2, -1);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(876, 36);
+            this.panel3.TabIndex = 0;
+            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
+            this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
             // 
             // button4
             // 
@@ -783,6 +803,8 @@ namespace ComplainRegister
             this.pictureBox1.Size = new System.Drawing.Size(35, 34);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseMove);
             // 
             // button2
             // 
@@ -832,14 +854,8 @@ namespace ComplainRegister
             this.label1.Size = new System.Drawing.Size(226, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Complaint Register";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(419, 418);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 14;
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
             // 
             // Form1
             // 
@@ -851,6 +867,7 @@ namespace ComplainRegister
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -858,13 +875,13 @@ namespace ComplainRegister
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -872,7 +889,7 @@ namespace ComplainRegister
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button ChangeUserPass;

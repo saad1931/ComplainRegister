@@ -66,6 +66,8 @@ namespace ComplainRegister
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(660, 139);
             this.panel1.TabIndex = 1;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // label1
             // 
@@ -90,6 +92,7 @@ namespace ComplainRegister
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(413, 155);
             this.panel3.TabIndex = 2;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // passwordTextBox
             // 

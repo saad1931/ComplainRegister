@@ -43,7 +43,7 @@ namespace ComplainRegister
         private void button5_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            //ComplainRegister.Form1.ActiveForm.Hide();
+            ComplainRegister.Form1.ActiveForm.Hide();
             new FormLogin().Show();
         }
 

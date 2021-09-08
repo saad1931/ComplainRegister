@@ -15,6 +15,7 @@ namespace ComplainRegister
     {
         Point lastClick;
         string path = Application.StartupPath;
+        public string conString = "Data Source=DESKTOP-CT235QF;Initial Catalog=coomplain;Integrated Security=True";
         //string connectionString = "Server=51.89.37.225;Database=SampleDB;User=sa;Password=blue@1122;";
 
         public FormLogin()
@@ -104,7 +105,7 @@ namespace ComplainRegister
                 {
                     this.Hide();
                     Form1 f = new Form1();
-                    //f.operatorLogin();
+                    f.operatorLogin();
                     f.Show();
 
                 }

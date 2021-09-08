@@ -35,6 +35,9 @@ namespace ComplainRegister
             this.operatorExistLabel = new System.Windows.Forms.Label();
             this.duplicateUser = new System.Windows.Forms.Label();
             this.Accounts = new System.Windows.Forms.DataGridView();
+            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Designation = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.emptyUserLabel = new System.Windows.Forms.Label();
             this.duplicateUserIcon = new System.Windows.Forms.PictureBox();
             this.operatorExistIcon = new System.Windows.Forms.PictureBox();
@@ -45,9 +48,6 @@ namespace ComplainRegister
             this.button5 = new System.Windows.Forms.Button();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.CncelButton = new System.Windows.Forms.Button();
-            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Designation = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Accounts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.duplicateUserIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.operatorExistIcon)).BeginInit();
@@ -126,6 +126,33 @@ namespace ComplainRegister
             this.Accounts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Accounts.Size = new System.Drawing.Size(394, 163);
             this.Accounts.TabIndex = 6;
+            this.Accounts.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.Accounts_CellBeginEdit);
+            this.Accounts.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
+            this.Accounts.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Accounts_MouseMove);
+            this.Accounts.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView1_RowsAdded);
+            this.Accounts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Accounts_KeyPress);
+            // 
+            // Username
+            // 
+            this.Username.HeaderText = "Username";
+            this.Username.Name = "Username";
+            this.Username.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Password
+            // 
+            this.Password.HeaderText = "Password";
+            this.Password.Name = "Password";
+            this.Password.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Designation
+            // 
+            this.Designation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Designation.HeaderText = "Designation";
+            this.Designation.Items.AddRange(new object[] {
+            "Administrator",
+            "Operator"});
+            this.Designation.Name = "Designation";
+            this.Designation.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // emptyUserLabel
             // 
@@ -237,28 +264,6 @@ namespace ComplainRegister
             this.CncelButton.UseVisualStyleBackColor = true;
             this.CncelButton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Username
-            // 
-            this.Username.HeaderText = "Username";
-            this.Username.Name = "Username";
-            this.Username.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Password
-            // 
-            this.Password.HeaderText = "Password";
-            this.Password.Name = "Password";
-            this.Password.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Designation
-            // 
-            this.Designation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Designation.HeaderText = "Designation";
-            this.Designation.Items.AddRange(new object[] {
-            "Administrator",
-            "Operator"});
-            this.Designation.Name = "Designation";
-            this.Designation.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
             // FirstTImeUses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,6 +289,8 @@ namespace ComplainRegister
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FirstTImeUses";
             this.Text = "FirstTImeUses";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.Accounts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.duplicateUserIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.operatorExistIcon)).EndInit();

@@ -32,7 +32,7 @@ namespace ComplainRegister
             clientNameComboItems();
             ClientBasicInfo();
             searchNameAutoComplete();
-            statusCombo.SelectedIndex = 0;
+            //statusCombo.SelectedIndex = 0;
             if (cNameCombo.SelectedItem.ToString() == "New Client")
             {
                 phone.Enabled = true;
@@ -127,7 +127,7 @@ namespace ComplainRegister
         }
 
 
-        //error
+        
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
@@ -178,18 +178,23 @@ namespace ComplainRegister
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void label9_MouseDown(object sender, MouseEventArgs e)
+        private void label1_MouseDown(object sender, MouseEventArgs e)
         {
             lastClick = e.Location;
         }
 
-        private void label9_MouseMove(object sender, MouseEventArgs e)
+        private void label1_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
                 this.Left += e.X - lastClick.X;
                 this.Top += e.Y - lastClick.Y;
             }
+        }
+
+        private void label9_MouseMove(object sender, MouseEventArgs e)
+        {
+           
         }
 
         private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
@@ -514,7 +519,7 @@ namespace ComplainRegister
                         DataTable dt = new DataTable();
                         adap.Fill(dt);
                         dataGridView1.DataSource = dt;
-                        // Got it? Okay let me know if anything else needed
+                        
                         if (dt.Rows.Count < 1)
                         {
                             LogOutMessageBox log = new LogOutMessageBox();
@@ -956,8 +961,8 @@ namespace ComplainRegister
                     viewComplaint(C, eml, phne);
                     pictureBox1.Location = new Point(5, 68);
                     pictureBox1.Size = new Size(162, 676);
-                    tabControl1.TabPages.Remove(tabControl1);
-                    tabControl1.TabPages.Remove(tabControl1);
+                    tabControl1.TabPages.Remove(tabPage2);
+                    tabControl1.TabPages.Remove(tabPage3);
                 }
                 catch (Exception ex)
                 {
@@ -1061,7 +1066,7 @@ namespace ComplainRegister
                 if (user == dbUsername && pass == dbPassword)
                 {
                     userPassMatched.ForeColor = Color.Green;
-                    userPassMatchedIcon.Image = tabPage1.Properties.Resources.CHECK_GREEN_RESIZED;
+                    userPassMatchedIcon.Image = ComplainRegister.Properties.Resources.CHECK_GREEN_RESIZED;
                     
 
                 }
@@ -1069,7 +1074,7 @@ namespace ComplainRegister
                 {
 
                     userPassMatched.ForeColor = Color.Red;
-                    userPassMatchedIcon.Image = tabPage1.Properties.Resources.CROSS_RED_RESIZED;
+                    userPassMatchedIcon.Image = ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
 
                 }
 
@@ -1087,13 +1092,13 @@ namespace ComplainRegister
             if (newPass.Text == confirmPass.Text)
             {
                 passConfirmed.ForeColor = Color.Green;
-                passConfirmIcon.Image = tabPage1.Properties.Resources.CHECK_GREEN_RESIZED;
+                passConfirmIcon.Image = ComplainRegister.Properties.Resources.CHECK_GREEN_RESIZED;
 
             }
             else
             {
                 passConfirmed.ForeColor = Color.Red;
-                passConfirmIcon.Image = tabPage1.Properties.Resources.CROSS_RED_RESIZED;
+                passConfirmIcon.Image = ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
             }
 
         }
@@ -1119,14 +1124,14 @@ namespace ComplainRegister
                 if (user == dbUsername && pass == dbPassword)
                 {
                     userPassMatched.ForeColor = Color.Green;
-                    userPassMatchedIcon.Image = tabPage1.Properties.Resources.CHECK_GREEN_RESIZED;
+                    userPassMatchedIcon.Image = ComplainRegister.Properties.Resources.CHECK_GREEN_RESIZED;
 
                 }
                 else
                 {
 
                     userPassMatched.ForeColor = Color.Red;
-                    userPassMatchedIcon.Image = tabPage1.Properties.Resources.CROSS_RED_RESIZED;
+                    userPassMatchedIcon.Image = ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
 
                 }
 
@@ -1147,13 +1152,13 @@ namespace ComplainRegister
                 if (newPass.Text == confirmPass.Text)
                 {
                     passConfirmed.ForeColor = Color.Green;
-                    passConfirmIcon.Image = tabPage1.Properties.Resources.CHECK_GREEN_RESIZED;
+                    passConfirmIcon.Image = ComplainRegister.Properties.Resources.CHECK_GREEN_RESIZED;
 
                 }
                 else
                 {
                     passConfirmed.ForeColor = Color.Red;
-                    passConfirmIcon.Image = tabPage1.Properties.Resources.CROSS_RED_RESIZED;
+                    passConfirmIcon.Image = ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
                 }
             }
         }
@@ -1178,9 +1183,9 @@ namespace ComplainRegister
                     newPass.Clear();
                     confirmPass.Clear();
                     userPassMatched.ForeColor = Color.Red;
-                    userPassMatchedIcon.Image = tabPage1.Properties.Resources.CROSS_RED_RESIZED;
+                    userPassMatchedIcon.Image = ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
                     passConfirmed.ForeColor = Color.Red;
-                    passConfirmIcon.Image = tabPage1.Properties.Resources.CROSS_RED_RESIZED;
+                    passConfirmIcon.Image = ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
                     log.Show();
                     con.Close();
 
@@ -1228,11 +1233,11 @@ namespace ComplainRegister
             statusCombo.SelectedIndex = 0;
             pictureBox1.Size = new Size(162, 628);
             pictureBox1.Location = new Point(5, 116);
-            tabControl1.TabPages.Add(tabControl1);
-            tabControl1.TabPages.Add(tabControl1);
+            tabControl1.TabPages.Add(tabPage2);
+            tabControl1.TabPages.Add(tabPage3);
             dateTimePicker1.Text = DateTime.Today.ToString();
             RegisterHeading.Text = "Register Complaint";
-            tabControl1.SelectedTab = tabControl1;
+            tabControl1.SelectedTab = tabPage2;
         }
 
         private void UpdateButton_Click(object sender, EventArgs e)
@@ -1298,6 +1303,5 @@ namespace ComplainRegister
             cityregion.Clear();
             cityregion.Enabled = true;
         }
-
     }
 }

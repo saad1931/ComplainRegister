@@ -76,7 +76,7 @@ namespace ComplainRegister
                 for (int i = 0; i < Accounts.RowCount - a; i++)
                 {
 
-                    if (Accounts.Rows[i].Cells[2].Value.ToString() == "operator")
+                    if (Accounts.Rows[i].Cells[2].Value.ToString() == "Operator")
                     {
                         operatorCount++;
                         if (operatorCount >= 2)
@@ -168,32 +168,7 @@ namespace ComplainRegister
 
         private void Accounts_MouseMove(object sender, MouseEventArgs e)
         {
-            try
-            {
-                for (int i = 0; i < Accounts.RowCount - 1; i++)
-                {
-                    if (Accounts.Rows[i].Cells[0].Value == null)
-                    {
-                        Accounts.Rows[i].Cells[0].Value = "";
-                    }
-                }
-                for (int i = 0; i < Accounts.RowCount - 1; i++)
-                {
-                    if (Accounts.Rows[i].Cells[0].Value.ToString() == "")
-                    {
-                        emptyUserLabel.ForeColor = Color.Red;
-                        emptyUserLabelIcon.Image = ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
-                    }
-                    else
-                    {
-                        emptyUserLabel.ForeColor = Color.Green;
-                        emptyUserLabelIcon.Image = ComplainRegister.Properties.Resources.CHECK_GREEN_RESIZED;
-                    }
-                }
-            }
-            catch { }
-            userDuplication();
-            validation();
+            
         }
 
 
@@ -303,7 +278,7 @@ namespace ComplainRegister
                 {
                     try
                     {
-                        SqlConnection con = new SqlConnection(@"Data Source = DESKTOP - CT235QF; Initial Catalog = coomplain; Integrated Security = True");
+                        SqlConnection con = new SqlConnection("Data Source=DESKTOP-CT235QF;Initial Catalog=coomplain;Integrated Security=True");
                         con.Open();
                         for (int i = 0; i < Accounts.RowCount - 1; i++)
                         {
@@ -331,6 +306,36 @@ namespace ComplainRegister
         private void adminExistLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Accounts_MouseMove(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                for (int i = 0; i < Accounts.RowCount - 1; i++)
+                {
+                    if (Accounts.Rows[i].Cells[0].Value == null)
+                    {
+                        Accounts.Rows[i].Cells[0].Value = "";
+                    }
+                }
+                for (int i = 0; i < Accounts.RowCount - 1; i++)
+                {
+                    if (Accounts.Rows[i].Cells[0].Value.ToString() == "")
+                    {
+                        emptyUserLabel.ForeColor = Color.Red;
+                        emptyUserLabelIcon.Image = ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
+                    }
+                    else
+                    {
+                        emptyUserLabel.ForeColor = Color.Green;
+                        emptyUserLabelIcon.Image = ComplainRegister.Properties.Resources.CHECK_GREEN_RESIZED;
+                    }
+                }
+            }
+            catch { }
+            userDuplication();
+            validation();
         }
 
         public void validation()
