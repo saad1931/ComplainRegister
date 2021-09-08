@@ -37,6 +37,7 @@ namespace ComplainRegister
             {
                 try
                 {
+                    //details     
                     string sql = "INSERT INTO ComplainDetails(clientName,details,product,date,status,technicians,engineers,cityregion)VALUES('" + cname + "','" + cdetails + "','" + product + "','" + date + "','" + status + "','" + technicians + "','" + engineers + "','" + cityrgion + "')";
                     SqlCommand cmd = new SqlCommand(sql, con);
                     cmd.ExecuteNonQuery();

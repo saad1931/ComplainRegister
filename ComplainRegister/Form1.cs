@@ -97,16 +97,15 @@ namespace ComplainRegister
             Graphics g = e.Graphics;
             Brush _textBrush;
 
-            // Get the item from the collection.
+           
             TabPage _tabPage = tabControl1.TabPages[e.Index];
 
-            // Get the real bounds for the tab rectangle.
+            
             Rectangle _tabBounds = tabControl1.GetTabRect(e.Index);
 
             if (e.State == DrawItemState.Selected)
             {
 
-                // Draw a different background color, and don't paint a focus rectangle.
                 _textBrush = new SolidBrush(Color.Black);
                 g.FillRectangle(Brushes.LightGray, e.Bounds);
             }
@@ -116,10 +115,10 @@ namespace ComplainRegister
                 e.DrawBackground();
             }
 
-            // Use our own font.
+            
             Font _tabFont = new Font("Segoe UI", (float)13.0, FontStyle.Regular, GraphicsUnit.Pixel);
 
-            // Draw string. Center the text.
+            
             StringFormat _stringFlags = new StringFormat();
             _stringFlags.Alignment = StringAlignment.Center;
             _stringFlags.LineAlignment = StringAlignment.Center;
@@ -211,35 +210,11 @@ namespace ComplainRegister
             }
         }
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.Black, ButtonBorderStyle.Solid);
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.Black, ButtonBorderStyle.Solid);
-
-        }
+      
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                techCombo.Items.Add(techList.SelectedItem);
-                techList.Items.Remove(techList.SelectedItem);
-                if (techCombo.Items.Count != 0)
-                {
-                    techCombo.SelectedIndex = 0;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(null, "No engineers were selected.", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
-                System.Console.WriteLine(ex);
-
-            }
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -251,54 +226,7 @@ namespace ComplainRegister
         {
 
 
-            if (phone.Text == "" || cityregion.Text == "" || detailsText.Text == "" || email.Text == "" || productText.Text == "")
-            {
-                LogOutMessageBox log = new LogOutMessageBox();
-                log.Show();
-                log.makeOkButton("A required field is empty.");
-                log.Location = new Point(log.Location.X + 10, log.Location.Y);
-
-
-            }
-            else
-            {
-
-                ConnectionClass cc = new ConnectionClass();
-                if (cNameCombo.Text != "New Client")
-                {
-                    cNameCombo.SelectedItem = cNameCombo.Text;
-                    cNameCombo.Items.Add(cNameCombo.Text);
-                    cc.addComplain(cNameCombo.Text, detailsText.Text, productText.Text, dateTimePicker1.Text, statusCombo.SelectedItem.ToString(), techniciansString(), engineersString(), cityregion.Text);
-                    cc.addClientDetails(cNameCombo.Text, phone.Text, email.Text, cityregion.Text, phoneEmailEdited, doesClientExist());
-                    phone.Clear();
-                    cityregion.Clear();
-                    detailsText.Clear();
-                    email.Clear();
-                    productText.Clear();
-                    for (int i = 0; i < techList.Items.Count; i++)
-                    {
-                        techCombo.Items.Add(techList.Items[i]);
-
-                    }
-                    techList.Items.Clear();
-                    for (int i = 0; i < engList.Items.Count; i++)
-                    {
-                        engCombo.Items.Add(engList.Items[i]);
-
-                    }
-                    engList.Items.Clear();
-                    cNameCombo.SelectedItem = "New Client";
-                    this.Refresh();
-                }
-                else if (cNameCombo.Text == "New Client")
-                {
-                    LogOutMessageBox log1 = new LogOutMessageBox();
-                    log1.Show();
-                    log1.makeOkButton("Invalid client name.");
-                }
-
-
-            }
+            
         }
         public bool doesClientExist()
         {
@@ -428,7 +356,7 @@ namespace ComplainRegister
             try
             {
             
-                //////dataGridView1.Rows.Clear();
+                dataGridView1.Rows.Clear();
             }
             catch
             {
@@ -1302,6 +1230,79 @@ namespace ComplainRegister
             email.Enabled = true;
             cityregion.Clear();
             cityregion.Enabled = true;
+        }
+
+        private void remo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                techCombo.Items.Add(techList.SelectedItem);
+                techList.Items.Remove(techList.SelectedItem);
+                if (techCombo.Items.Count != 0)
+                {
+                    techCombo.SelectedIndex = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(null, "No engineers were selected.", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+                System.Console.WriteLine(ex);
+
+            }
+        }
+       
+        private void SubmitButton_Click(object sender, EventArgs e)
+        {
+            /* 
+            if (phone.Text == "" || cityregion.Text == "" ||  detailsText.Text == "" || email.Text == "" || productText.Text == "")
+            {
+                LogOutMessageBox log = new LogOutMessageBox();
+                log.Show();
+                log.makeOkButton("A required field is empty.");
+                log.Location = new Point(log.Location.X + 10, log.Location.Y);
+
+
+            }
+            else
+            {
+
+                ConnectionClass cc = new ConnectionClass();
+                if (cNameCombo.Text != "New Client")
+                {
+                    cNameCombo.SelectedItem = cNameCombo.Text;
+                    cNameCombo.Items.Add(cNameCombo.Text);
+                    cc.addComplain(cNameCombo.Text, detailsText.Text, productText.Text, dateTimePicker1.Text, statusCombo.SelectedItem.ToString(), techniciansString(), engineersString(), cityregion.Text);
+                    cc.addClientDetails(cNameCombo.Text, phone.Text, email.Text, cityregion.Text, phoneEmailEdited, doesClientExist());
+                    phone.Clear();
+                    cityregion.Clear();
+                    detailsText.Clear();
+                    email.Clear();
+                    productText.Clear();
+                    for (int i = 0; i < techList.Items.Count; i++)
+                    {
+                        techCombo.Items.Add(techList.Items[i]);
+
+                    }
+                    techList.Items.Clear();
+                    for (int i = 0; i < engList.Items.Count; i++)
+                    {
+                        engCombo.Items.Add(engList.Items[i]);
+
+                    }
+                    engList.Items.Clear();
+                    cNameCombo.SelectedItem = "New Client";
+                    this.Refresh();
+                }
+                else if (cNameCombo.Text == "New Client")
+                {
+                    LogOutMessageBox log1 = new LogOutMessageBox();
+                    log1.Show();
+                    log1.makeOkButton("Invalid client name.");
+                }
+
+
+            }
+        */
         }
     }
 }
