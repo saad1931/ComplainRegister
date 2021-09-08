@@ -96,6 +96,35 @@ namespace ComplainRegister
              }
 
          }
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (techList.Items.Count >= 2)
+            {
+                techLabelIcon.Image = ComplainRegister.Properties.Resources.CHECK_GREEN_RESIZED;
+                techLabel.ForeColor = Color.Green;
+            }
+            else
+            {
+                techLabelIcon.Image = ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
+                techLabel.ForeColor = Color.Red;
+            }
+
+            if (engList.Items.Count >= 2)
+            {
+                engLabelIcon.Image = ComplainRegister.Properties.Resources.CHECK_GREEN_RESIZED;
+                engLabel.ForeColor = Color.Green;
+            }
+            else
+            {
+                engLabelIcon.Image = ComplainRegister.Properties.Resources.CROSS_RED_RESIZED;
+                engLabel.ForeColor = Color.Red;
+            }
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastClick.X;
+                this.Top += e.Y - lastClick.Y;
+            }
+        }
 
 
         public void continueToLogin()

@@ -106,6 +106,9 @@ namespace ComplainRegister
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LogOutMessageBox";
             this.Text = "LogOutMessageBox";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_Mousedown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
