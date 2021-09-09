@@ -42,7 +42,7 @@ namespace ComplainRegister
 
         private void remo_Click_1(object sender, EventArgs e)
         {
-            //techList.Items.Remove(techList.SelectedItems);
+            
             techList.Items.Remove(techList.SelectedItem);
         }
 

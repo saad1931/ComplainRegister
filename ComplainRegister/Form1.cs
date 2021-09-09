@@ -858,7 +858,7 @@ namespace ComplainRegister
             phone.Enabled = false;
             email.Enabled = false;
 
-
+            
             string cname, prdct, dtails, dte, ctyrgn, eml = "", phne = "", stts, technicians, engineers;
             if (dataGridView1.Rows.Count > 0)
             {
@@ -875,7 +875,7 @@ namespace ComplainRegister
                     ctyrgn = dataGridView1.SelectedRows[0].Cells[8].Value.ToString();
                     SqlConnection con = new SqlConnection(conString);
                     con.Open();
-                    string sql = "SELECT * FROM ClientDetail WHERE ClientName='" + dataGridView1.SelectedRows[0].Cells[1].Value.ToString() + "'";
+                    string sql = "SELECT * FROM ClientDetail WHERE clientName='" + dataGridView1.SelectedRows[0].Cells[1].Value.ToString() + "'";
                     SqlCommand cmd = new SqlCommand(sql, con);
                     SqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
@@ -896,6 +896,8 @@ namespace ComplainRegister
                 {
                     MessageBox.Show(ex.ToString());
                 }
+                
+           
             }
             else if (dataGridView1.Rows.Count > 0 && dataGridView1.SelectedRows.Count == 0)
             {
@@ -959,7 +961,7 @@ namespace ComplainRegister
                     string compID = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
                     SqlConnection con = new SqlConnection(conString);
                     con.Open();
-                    string sql = "DELETE FROM ComplainDetails WHERE ComplaintID='" + compID + "'";
+                    string sql = "DELETE FROM ComplainDetails WHERE complaintID='" + compID + "'";
                     SqlCommand cmd = new SqlCommand(sql, con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Complain deleted");
@@ -1253,7 +1255,7 @@ namespace ComplainRegister
        
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            /* 
+             
             if (phone.Text == "" || cityregion.Text == "" ||  detailsText.Text == "" || email.Text == "" || productText.Text == "")
             {
                 LogOutMessageBox log = new LogOutMessageBox();
@@ -1302,7 +1304,7 @@ namespace ComplainRegister
 
 
             }
-        */
+        
         }
     }
 }

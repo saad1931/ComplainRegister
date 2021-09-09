@@ -7,14 +7,14 @@ using System.Data.SqlClient;
 
 namespace ComplainRegister
 {
+      
     static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
+            
         [STAThread]
         static void Main()
         {
+            
             string path = Application.StartupPath;
             bool error = false;
             int rows = 0;
@@ -71,11 +71,12 @@ namespace ComplainRegister
                     LogOutMessageBox log = new LogOutMessageBox();
                     log.makeOkButton("Error connecting to database");
                 }
+                
             }
-
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new AddTechandEngineers());
+            
+              //Application.EnableVisualStyles();
+              //Application.SetCompatibleTextRenderingDefault(false);
+              //Application.Run(new Form1());
         }
     }
 }
