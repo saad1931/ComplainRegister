@@ -953,6 +953,7 @@ namespace ComplainRegister
 
         private void button9_Click(object sender, EventArgs e)
         {
+
             DialogResult res = MessageBox.Show("Are you sure you want to delete this complaint?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (res == System.Windows.Forms.DialogResult.Yes)
             {
@@ -961,7 +962,7 @@ namespace ComplainRegister
                     string compID = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
                     SqlConnection con = new SqlConnection(conString);
                     con.Open();
-                    string sql = "DELETE FROM ComplainDetails WHERE complaintID='" + compID + "'";
+                    string sql = "DELETE FROM ComplainDetails WHERE ComplaintID='" + compID + "'";
                     SqlCommand cmd = new SqlCommand(sql, con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Complain deleted");
